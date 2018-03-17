@@ -13,6 +13,19 @@ client.on('message', message => {
         message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
 		return;
 	}	
+	if (message.content.match(/food/i) ||
+        message.content.match(/steak/i) ||
+		message.content.match(/cheese/i) ||
+		message.content.match(/dinner/i) ||
+		message.content.match(/lunch/i) ||
+		message.content.match(/breakfast/i) ||
+		message.content.match(/meatballs/i) ||
+		message.content.match(/tacos/i) ||
+        )
+    	{
+        message.channel.sendMessage("Kitchen Nightmares lmfao  https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
+		return;
+    	}
 	//This is his mention code
         if (message.content.match(/@loren goodwin/i))
 		if (message.content.match(/@loren goodwin view github/i))
