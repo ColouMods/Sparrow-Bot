@@ -18,7 +18,7 @@ client.on('message', message => {
 	    message.content.match(/ramsay/i)
         )
     	{
-        message.channel.sendMessage("Funny you say that <br> https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
+        message.channel.sendMessage("Funny you say that https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
 		return;
     	}
 		//This is her mention code
