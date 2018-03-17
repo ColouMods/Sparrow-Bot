@@ -22,7 +22,7 @@ client.on('message', message => {
 		return;
     	}
 	
-	if (message.channel)
+	if (message.channel.send)
 	{
 	lmaoNum = (Math.floor(Math.random() * 10)+1);//this is the number of possibilities starting from zero
 	if (lmaoNum == 1))
