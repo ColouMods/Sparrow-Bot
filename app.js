@@ -21,21 +21,21 @@ client.on('message', message => {
         message.channel.sendMessage("Funny you say that <br> https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
 		return;
     	}
-	//This is his mention code
-        if (message.content.match(/@loren goodwin/i))
-		if (message.content.match(/@loren goodwin view github/i))
+		//This is her mention code
+	if (message.content.match(/@sparrow/i))
+		if (message.content.match(/@sparrow view github/i))
 	{
-        message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm Sparrow.");
+        message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm Evie Whateverthefuckmylastnameis.");
         }
-		else if (message.content.match(/@loren goodwin quote the lion king/i))
+		else if (message.content.match(/@sparrow quote the lion king/i))
 	{
-        message.channel.sendMessage("I've never seen the Lion King.");
+        message.channel.sendMessage("placeholder");
         }
 		else 
 	{
-		message.channel.sendMessage("Oh yeah the game is hardcodedly hiding those meshes for rocke_v. When you rename the car it no longer does that.");
+		message.channel.sendMessage("placeholder");
 	}
-	return;
+    	return;
 });
 
 // THIS  MUST  BE  THIS  WAY
