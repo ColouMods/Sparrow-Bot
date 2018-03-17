@@ -10,14 +10,21 @@ client.on('message', message => {
 		if (message.content.match(/cat/i)) 
     {
 		catNum = (Math.floor(Math.random() * 4)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-        message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/cats/cat"+catNum+".png");
+        message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".png");
 		return;
     }
-    if (message.content.match(/steamed hams/i) ||
-        message.content.match(/aurora borealis/i)
+    if (message.content.match(/food/i) ||
+        message.content.match(/steak/i) ||
+		message.content.match(/cheese/i) ||
+		message.content.match(/dinner/i) ||
+		message.content.match(/lunch/i) ||
+		message.content.match(/breakfast/i) ||
+		message.content.match(/meatballs/i) ||
+		message.content.match(/tacos/i) ||
         )
     {
-        message.channel.sendMessage('Can we cool it on the constant Steamed Hams references in this chat?');
+        message.channel.sendMessage('Kitchen Nightmares lmfao
+		https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg"');
 		return;
     }
 	//This is her mention code
