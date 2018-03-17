@@ -21,6 +21,16 @@ client.on('message', message => {
         message.channel.sendMessage("Funny you say that https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
 		return;
     	}
+	
+	if (message.channel)
+	{
+	lmaoNum = (Math.floor(Math.random() * 10)+1);//this is the number of possibilities starting from zero
+	if (lmaoNum == 1))
+    	{
+        message.channel.sendMessage("lmao");
+    	}
+	}
+	
 		//This is her mention code
 	if (message.content.match(/@sparrow/i))
 		if (message.content.match(/@sparrow view github/i))
@@ -36,15 +46,6 @@ client.on('message', message => {
 		message.channel.sendMessage("placeholder");
 	}
     	return;
-	if (message.channel)
-		lmaoNum = (Math.floor(Math.random() * 10)+1);//this is the number of possibilities starting from zero
-		if (lmaoNum == 1))
-    	{
-        message.channel.sendMessage("lmao");
-		return;
-    	}
-	}
-
 });
 
 // THIS  MUST  BE  THIS  WAY
