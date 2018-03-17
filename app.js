@@ -23,8 +23,7 @@ client.on('message', message => {
 		message.content.match(/tacos/i) ||
         )
     {
-        message.channel.sendMessage('Kitchen Nightmares lmfao
-		https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg"');
+        message.channel.sendMessage("Kitchen Nightmares lmfao https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
 		return;
     }
 	//This is her mention code
