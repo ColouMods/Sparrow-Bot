@@ -7,6 +7,16 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if(message.author.bot) return;
+	
+	lmaoNum = (Math.floor(Math.random() * 10)+1);//this is the number of possibilities starting from zero
+	if (lmaoNum == 1))
+        {
+		message.channel.sendMessage("lmao");
+	}
+        
+	
+	
+	
 		if (message.content.match(/cat/i)) 
         {
 		catNum = (Math.floor(Math.random() * 4)+1);//this is the number of possibilities starting from zero, so 5 is 01234
@@ -37,15 +47,7 @@ client.on('message', message => {
 	}
     	return;
 	
-		if (message)
-	{
-		lmaoNum = (Math.floor(Math.random() * 9)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-		if (lmaoNum == 1))
-        {
-		message.channel.sendMessage("lmao");
-		return;
-		}
-        }
+
 });
 
 // THIS  MUST  BE  THIS  WAY
