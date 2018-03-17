@@ -7,17 +7,8 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if(message.author.bot) return;
-	
-	lmaoNum = (Math.floor(Math.random() * 10)+1);//this is the number of possibilities starting from zero
-	if (lmaoNum == 1))
-        {
-		message.channel.sendMessage("lmao");
-	}
-        
-	
-	
-	
-		if (message.content.match(/cat/i)) 
+
+	if (message.content.match(/cat/i)) 
         {
 		catNum = (Math.floor(Math.random() * 4)+1);//this is the number of possibilities starting from zero, so 5 is 01234
         message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
