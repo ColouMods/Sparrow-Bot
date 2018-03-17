@@ -1,2 +1,2 @@
-# Loren-Bot
-It's Loren, but in bot form.
+# SPARROW-BOT
+It's Bot, but in Sparrow form.
