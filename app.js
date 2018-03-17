@@ -10,7 +10,7 @@ client.on('message', message => {
 		if (message.content.match(/cat/i)) 
         {
 		catNum = (Math.floor(Math.random() * 4)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-        message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".png");
+        message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
 		return;
 	}	
 	//This is his mention code
