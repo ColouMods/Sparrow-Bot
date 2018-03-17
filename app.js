@@ -20,7 +20,7 @@ client.on('message', message => {
 		message.content.match(/lunch/i) ||
 		message.content.match(/breakfast/i) ||
 		message.content.match(/meatballs/i) ||
-		message.content.match(/tacos/i) ||
+		message.content.match(/tacos/i)
         )
     	{
         message.channel.sendMessage("Kitchen Nightmares lmfao  https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
