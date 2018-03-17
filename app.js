@@ -13,15 +13,12 @@ client.on('message', message => {
         message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
 		return;
 	}	
-	if (message.content.match(/food/i) ||
-	    message.content.match(/kitchen/i) ||
-	    message.content.match(/dinner/i) ||
-	    message.content.match(/lunch/i) ||
-	    message.content.match(/breakfast/i) ||
+	if (message.content.match(/kitchen nightmares/i) ||
+	    message.content.match(/gordon/i) ||
 	    message.content.match(/ramsay/i)
         )
     	{
-        message.channel.sendMessage("Kitchen Nightmares lmfao  https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
+        message.channel.sendMessage("Funny you say that <br> https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
 		return;
     	}
 	//This is his mention code
