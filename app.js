@@ -22,14 +22,7 @@ client.on('message', message => {
 		return;
     	}
 	
-	if (message.channel.send)
-	{
-	lmaoNum = (Math.floor(Math.random() * 10)+1);
-	if (lmaoNum == 1))
-    	{
-        message.channel.sendMessage("lmao");
-    	}
-	}
+
 	
 		//This is her mention code
 	if (message.content.match(/@sparrow/i))
