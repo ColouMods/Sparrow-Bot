@@ -36,6 +36,16 @@ client.on('message', message => {
 		message.channel.sendMessage("placeholder");
 	}
     	return;
+	
+		if (message)
+	{
+		lmaoNum = (Math.floor(Math.random() * 9)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+		if (lmaoNum == 1))
+        {
+		message.channel.sendMessage("lmao");
+		return;
+		}
+        }
 });
 
 // THIS  MUST  BE  THIS  WAY
