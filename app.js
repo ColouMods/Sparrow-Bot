@@ -55,7 +55,11 @@ client.on('message', message => {
 	{
 	message.channel.sendMessage("Brain poop, whoops.");
 	}
-    	return;
+		else
+	{
+	message.channel.sendMessage("Heh, you dumb motherfucker. Doc hasn't programmed a mention line for me yet.");
+	}
+	return;
 });
 
 // THIS  MUST  BE  THIS  WAY
