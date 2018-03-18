@@ -23,7 +23,7 @@ client.on('message', message => {
 	
 	if (message.content.match(/cat/i)) 
         {
-		catNum = (Math.floor(Math.random() * 4)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+		catNum = (Math.floor(Math.random() * 55)+1);//this is the number of possibilities starting from zero, so 5 is 01234
         message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
 		return;
 	}	
