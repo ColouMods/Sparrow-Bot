@@ -40,11 +40,11 @@ client.on('message', message => {
 	
 		//This is her mention code
 	if (message.content.match(/@sparrow/i))
-		if (message.content.match(/@sparrow view github/i))
+		if (message.content.match(/view github/i))
 	{
         message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm Sparrow.");
         }
-		else if (message.content.match(/@sparrow war is good for absolutely nothing/i))
+		else if (message.content.match(/war is good for absolutely nothing/i))
 	{
         message.channel.sendMessage("Haha");
 	message.channel.sendMessage("Right, I'm afraid I'm odd");
