@@ -44,9 +44,12 @@ client.on('message', message => {
 	{
         message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm Sparrow.");
         }
-		else if (message.content.match(/@sparrow quote the lion king/i))
+		else if (message.content.match(/@sparrow war is good for absolutely nothing/i))
 	{
-        message.channel.sendMessage("placeholder");
+        message.channel.sendMessage("Haha");
+	message.channel.sendMessage("Right, I'm afraid I'm odd");
+	message.channel.sendMessage("No");
+	message.channel.sendMessage("Off to bed*");
         }
 		else 
 	{
