@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
-    client.user.setGame('The Sims 2 Ultimate Collection')
 });
 
 client.on('message', message => {
