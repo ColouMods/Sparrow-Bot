@@ -51,9 +51,9 @@ client.on('message', message => {
 	message.channel.sendMessage("No");
 	message.channel.sendMessage("Off to bed*");
         }
-		else 
+		else if (message.content.match(/a garden sounds fun/i))
 	{
-		message.channel.sendMessage("placeholder");
+	message.channel.sendMessage("Brain poop, whoops.");
 	}
     	return;
 });
