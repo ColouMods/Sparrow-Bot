@@ -57,7 +57,7 @@ client.on('message', message => {
 	}
 		else
 	{
-	message.channel.sendMessage("Heh, you dumb motherfucker. Doc hasn't programmed a mention line for me yet.");
+	message.channel.sendMessage("Sparrow should be good");
 	}
 	return;
 });
