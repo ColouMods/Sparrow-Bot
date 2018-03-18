@@ -13,7 +13,7 @@ client.on('message', message => {
 	lmaoNum = (Math.floor(Math.random() * 10)+1);
 	if (lmaoNum == 1)
     	{
-        message.channel.sendMessage("lmao");
+        message.channel.sendMessage("Lmao");
     	}
 	}
 	
