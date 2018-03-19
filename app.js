@@ -45,6 +45,15 @@ client.on('message', message => {
 		return;
     	}
 	
+	if (message.content.match(/lol/i) ||
+	    message.content.match(/lmfao/i) ||
+	    message.content.match(/lmao/i) ||
+	    message.content.match(/rofl/i)
+        )
+    	{
+        message.channel.sendMessage("lmao");
+		return;
+    	}
 
 	
 		//This is her mention code
