@@ -17,7 +17,16 @@ client.on('message', message => {
         message.channel.sendMessage("Lmao");
     	}
 	}
+	if(message.author.bot) return;
 	
+	if (message.content.match(/ /i))
+	{
+	cuntNum = (Math.floor(Math.random() * 100)+1);
+	if (cuntNum == 1)
+    	{
+        message.channel.sendMessage("i hope you're prepared for an unforgettable cunt");
+    	}
+	}
 	
 	
 	
