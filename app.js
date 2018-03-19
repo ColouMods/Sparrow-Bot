@@ -51,7 +51,7 @@ client.on('message', message => {
 	    message.content.match(/rofl/i)
         )
     	{
-        message.channel.sendMessage("lmao");
+        message.channel.sendMessage("Lmao");
 		return;
     	}
 
