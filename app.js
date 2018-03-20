@@ -63,7 +63,7 @@ client.on('message', message => {
 	if (message.content.match(/@sparrow/i))
 		if (message.content.match(/view github/i))
 	{
-        message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm Sparrow.");
+        message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm half-digested Sparrow.");
         }
 		else if (message.content.match(/war is good for absolutely nothing/i))
 	{
