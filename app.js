@@ -7,9 +7,9 @@ client.on('ready', () => {
     /*client.user.setActivity('YouTube', { type: 'WATCHING' })
   	.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   	.catch(console.error);*/
-    client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
+    /*client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
   	.then(console.log)
-  	.catch(console.error);
+  	.catch(console.error);*/
 });
 
 client.on('message', message => {
