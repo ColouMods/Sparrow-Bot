@@ -4,6 +4,9 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
     //client.user.setActivity('Sims 2 Ultimate Collection', { type: 'PLAYING' });
+    client.user.setActivity('YouTube', { type: 'WATCHING' })
+  	.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+  	.catch(console.error);
 });
 
 client.on('message', message => {
