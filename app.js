@@ -12,6 +12,11 @@ client.on('ready', () => {
   	.catch(console.error);*/
 });
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
+client.on('message', function(message) {
+        // Don't forget to log the message!
+        client.sendMessage(message.channel, "Hello!");
+});
+
 client.on('message', message => {
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat1.jpg' ||
 		message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat5.jpg'
