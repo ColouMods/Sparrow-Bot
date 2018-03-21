@@ -97,6 +97,7 @@ client.on('message', message => {
 		return;
 	}	
 	if (message.content.match(/kitchen nightmares/i) ||
+	    message.content.match(/lamb sauce/i) ||
 	    message.content.match(/gordon/i) ||
 	    message.content.match(/ramsay/i)
         )
