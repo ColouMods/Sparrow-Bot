@@ -11,7 +11,22 @@ client.on('ready', () => {
   	.then(console.log)
   	.catch(console.error);*/
 });
-
+//THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
+client.on('message', message => {
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat51.jpg')
+	{
+        message.channel.sendMessage("AWW CONE BABy");
+	}
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat53.jpg')
+	{
+        message.channel.sendMessage("SO CUTE");
+	}
+	if (message.content === https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
+	{
+        message.channel.sendMessage("AwW");
+		message.channel.sendMessage("PURRITO");
+});
+//THIS IS MORE GENERAL STUFF.
 client.on('message', message => {
 	if(message.author.bot) return;
 	
