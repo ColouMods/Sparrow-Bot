@@ -14,7 +14,7 @@ client.on('ready', () => {
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 client.on('message', message => {
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat1.jpg' ||
-		message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat1.jpg'
+		message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat5.jpg'
 		)
 	{
 		message.channel.sendMessage("MIIIA");
