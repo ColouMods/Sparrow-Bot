@@ -21,10 +21,11 @@ client.on('message', message => {
 	{
         message.channel.sendMessage("SO CUTE");
 	}
-	if (message.content === https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
 	{
-        message.channel.sendMessage("AwW");
-		message.channel.sendMessage("PURRITO");
+        message.channel.sendMessage('AwW');
+	message.channel.sendMessage('PURRITO');
+	}
 });
 //THIS IS MORE GENERAL STUFF.
 client.on('message', message => {
