@@ -13,20 +13,49 @@ client.on('ready', () => {
 });
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 client.on('message', message => {
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat25.jpg')
+	{
+		message.channel.sendMessage("Too cute tbh");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat26.jpg')
+	{
+		message.channel.sendMessage("Awwwwwwwww");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
+	{
+        message.channel.sendMessage("AwW");
+		message.channel.sendMessage("PURRITO");
+	}
+
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat37.jpg')
+	{
+		sameNum = (Math.floor(Math.random() * 2)+1);
+		if 	(sameNum == 1)
+		{
+		message.channel.sendMessage("same");
+		} else {
+		message.channel.sendMessage("Same");
+		}
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat39.jpg')
+	{
+		message.channel.sendMessage("haha")
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat51.jpg')
 	{
         message.channel.sendMessage("AWW CONE BABy");
 	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat53.jpg')
 	{
         message.channel.sendMessage("SO CUTE");
 	}
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
-	{
-        message.channel.sendMessage('AwW');
-	message.channel.sendMessage('PURRITO');
-	}
-	return;
+	
 });
 //THIS IS MORE GENERAL STUFF.
 client.on('message', message => {
