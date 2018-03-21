@@ -26,6 +26,7 @@ client.on('message', message => {
         message.channel.sendMessage('AwW');
 	message.channel.sendMessage('PURRITO');
 	}
+	return;
 });
 //THIS IS MORE GENERAL STUFF.
 client.on('message', message => {
