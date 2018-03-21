@@ -66,7 +66,7 @@ client.on('message', message => {
 });
 //THIS IS MORE GENERAL STUFF.
 client.on('message', message => {
-	if(message.author.bot) return;
+	//if(message.author.bot) return;
 	
 	if (message.content.match(/ /i))
 	{
