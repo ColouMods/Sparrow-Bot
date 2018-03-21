@@ -10,6 +10,7 @@ client.on('ready', () => {
     /*client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
   	.then(console.log)
   	.catch(console.error);*/
+        client.setPlayingGame('Call of Duty: Black Ops 10');
 });
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 
