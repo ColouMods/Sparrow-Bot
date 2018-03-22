@@ -133,6 +133,10 @@ client.on('message', message => {
 	{
 	message.channel.sendMessage("Brain poop, whoops.");
 	}
+		else if (message.content.match(/springfield nightmares/i))
+	{
+	message.channel.sendMessage("I'll have to start Springfield Nightmares sometime this week");	
+	}
 		else
 	{
 	message.channel.sendMessage("Sparrow should be good");
