@@ -135,7 +135,7 @@ client.on('message', message => {
 	}
 		else if (message.content.match(/springfield nightmares/i))
 	{
-	message.channel.sendMessage("I'll have to start Springfield Nightmares sometime this week");	
+	message.channel.sendMessage("Oh god I gotta work on that");	
 	}
 		else
 	{
