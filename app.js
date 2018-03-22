@@ -77,7 +77,6 @@ client.on('message', message => {
         message.channel.sendMessage("Lmao");
     	}
 	}
-	if(message.author.bot) return;
 	
 	if (message.content.match(/ /i))
 	{
