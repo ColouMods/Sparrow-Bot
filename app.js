@@ -61,12 +61,12 @@ client.on('message', message => {
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat51.jpg')
 	{
-        message.channel.sendMessage("AWW CONE BABy");
+        	message.channel.sendMessage("AWW CONE BABy");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat53.jpg')
 	{
-        message.channel.sendMessage("SO CUTE");
+        	message.channel.sendMessage("SO CUTE");
 	}
 	
 });
