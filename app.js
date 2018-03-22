@@ -34,10 +34,15 @@ client.on('message', message => {
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
 	{
-        message.channel.sendMessage("AwW");
+        	message.channel.sendMessage("AwW");
 		message.channel.sendMessage("PURRITO");
 	}
-
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat36.jpg')
+	{
+		message.channel.sendMessage("RAWR");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat37.jpg')
 	{
 		sameNum = (Math.floor(Math.random() * 2)+1);
