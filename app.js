@@ -74,14 +74,14 @@ client.on('message', message => {
 client.on('message', message => {
 	if(message.author.bot) return;
 	
-	if (message.content.match(/ /i))
-	{
+	//if (message.content.match(/ /i))
+	//{
 	lmaoNum = (Math.floor(Math.random() * 10)+1);
 	if (lmaoNum == 1)
     	{
         message.channel.sendMessage("Lmao");
     	}
-	}
+	//}
 	
 	if (message.content.match(/ /i))
 	{
