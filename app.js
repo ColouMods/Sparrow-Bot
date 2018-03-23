@@ -21,6 +21,16 @@ client.on('message', message => {
 		message.channel.sendMessage("MIIIA");
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat8.jpg')
+	{
+		message.channel.sendMessage("same");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat25.jpg')
+	{
+		message.channel.sendMessage("EYES ARE SO CUTE THO");
+		message.channel.sendMessage("YEAH");
+	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat25.jpg')
 	{
@@ -30,6 +40,11 @@ client.on('message', message => {
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat26.jpg')
 	{
 		message.channel.sendMessage("Awwwwwwwww");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat28.jpg')
+	{
+		message.channel.sendMessage("When you realise you're a cat");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
@@ -59,9 +74,29 @@ client.on('message', message => {
 		message.channel.sendMessage("haha")
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat42.jpg')
+	{
+		message.channel.sendMessage("NSFW")
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat47.jpg')
+	{
+        	message.channel.sendMessage("STRETCHY CONE");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat48.jpg')
+	{
+        	message.channel.sendMessage("Bag cat");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat51.jpg')
 	{
         	message.channel.sendMessage("AWW CONE BABy");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat52.jpg')
+	{
+        	message.channel.sendMessage("Awww poor thing :frowning:");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat53.jpg')
