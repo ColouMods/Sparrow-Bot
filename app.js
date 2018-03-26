@@ -60,12 +60,9 @@ client.on('message', message => {
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat37.jpg')
 	{
-		sameNum = (Math.floor(Math.random() * 2)+1);
-		if 	(sameNum == 1)
+		same = ["same", "Same"];
 		{
-		message.channel.sendMessage("same");
-		} else {
-		message.channel.sendMessage("Same");
+		message.channel.sendMessage(same[Math.floor(Math.random() * 2)]);
 		}
 	}
 	
