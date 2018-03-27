@@ -105,19 +105,13 @@ client.on('message', message => {
 //THIS IS MORE GENERAL STUFF.
 client.on('message', message => {
 	if(message.author.bot)
-	{
 		if (message.author.username == "Colou's Pet Bot")
-		{
 			if (message.content.match(/<@424679471077916682>/i))
-			{
 				if (message.content.match(/Hi/i))
 				{
         			message.channel.sendMessage("Oh hi.");
         			}
-			}
-		}
-	return;
-	}
+	else return;
 	
 	//if (message.content.match(/ /i))
 	//{
