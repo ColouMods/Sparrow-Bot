@@ -15,7 +15,9 @@ client.on('ready', () => {
 client.on('message', message => {
 	if (message.author.bot == true) {
 		if (message.content === "<@424679471077916682> Hi") {
-		message.channel.sendMessage("Hi.");	
+			setTimeout(() => {
+				message.channel.sendMessage("Hi.");	
+			}, 1000);
 		} else if (message.content === "How are you?") {
        		message.channel.send("OK, I guess.");
        		}
