@@ -16,7 +16,9 @@ client.on('message', message => {
 	if (message.author.bot == true) {
 		if (message.content === "<@424679471077916682> Hi") {
 		message.channel.sendMessage("Hi.");	
-		}	
+		} else if (message.content === "How are you?") {
+       		message.channel.send("I WANT BEES IN MY MOUTH.");
+       		}
 }
 });
 
