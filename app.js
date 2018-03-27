@@ -20,6 +20,7 @@ client.on('message', message => {
        		message.channel.send("I WANT BEES IN MY MOUTH.");
        		}
 }
+return;
 });
 
 client.on('message', message => {
