@@ -26,6 +26,22 @@ client.on('message', message => {
 }
 return;
 });
+//This is for responding to Chris
+client.on('message', message => {
+	if (message.author.username == "Chris Johnson") {
+		if (message.content === "<@424679471077916682>") {
+			if (message.content === "die") {
+				message.channel.sendMessage("No, Chris. Lmao.");	
+			}
+		} else if (message.content === "bot") {
+			if (message.content === "die") {
+				message.channel.sendMessage("No, Chris. Lmao.");	
+			}
+       		}
+}
+return;
+});
+
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 client.on('message', message => {
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat1.jpg' ||
