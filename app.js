@@ -10,6 +10,7 @@ client.on('ready', () => {
     /*client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
   	.then(console.log)
   	.catch(console.error);*/
+	var diebot = 1;
 });
 
 client.on('message', message => {
@@ -28,10 +29,17 @@ return;
 });
 //This is for responding to Chris
 client.on('message', message => {
-	if (message.author.username == "Chris") {
+	if (message.author.username == "Colou") {
 		if (message.content.match(/<@424679471077916682>/i)) {
 			if (message.content.match(/die/i)) {
-				message.channel.sendMessage("No, Chris. Lmao.");	
+				if (diebot == 20)
+    				{
+       					message.channel.sendMessage("Don't you think you've said that enough, Chris?");
+					var diebot = 1;
+					return;
+    				}
+				message.channel.sendMessage("No, Chris. Lmao.");
+				diebot++;
 			}
 		} else if (message.content.match(/bot/i)) {
 			if (message.content.match(/die/i)) {
