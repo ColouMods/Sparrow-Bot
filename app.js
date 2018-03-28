@@ -28,7 +28,7 @@ return;
 });
 //This is for responding to Chris
 client.on('message', message => {
-	if (message.author.username == "Chris Johnson") {
+	//if (message.author.username == "Chris Johnson") {
 		if (message.content.match(/<@424679471077916682>/i)) {
 			if (message.content.match(/die/i)) {
 				message.channel.sendMessage("No, Chris. Lmao.");	
@@ -37,7 +37,7 @@ client.on('message', message => {
 			if (message.content.match(/die/i)) {
 				message.channel.sendMessage("No, Chris. Lmao.");	
 			}
-       		}
+       		//}
 }
 return;
 });
