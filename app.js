@@ -19,16 +19,14 @@ client.on('message', message => {
 			message.channel.startTyping();
 			setTimeout(() => {
 				message.channel.sendMessage("Hi.");	
-			}, 2000
+			}, 2000);
 			message.channel.stopTyping(true);
-			);
 		} else if (message.content === "How are you?") {
 			message.channel.startTyping();
 			setTimeout(() => {
        				message.channel.send("OK, I guess.");
-			}, 2000
+			}, 2000);
 			message.channel.stopTyping(true);
-			);
        		}
 }
 return;
