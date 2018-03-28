@@ -43,7 +43,14 @@ client.on('message', message => {
 			}
 		} else if (message.content.match(/bot/i)) {
 			if (message.content.match(/die/i)) {
-				message.channel.sendMessage("No, Chris. Lmao.");	
+				if (diebot == 20)
+    				{
+       					message.channel.sendMessage("Don't you think you've said that enough, Chris?");
+					var diebot = 1;
+					return;
+    				}
+				message.channel.sendMessage("No, Chris. Lmao.");
+				diebot++;	
 			}
        		}
 }
