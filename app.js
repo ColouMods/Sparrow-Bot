@@ -121,6 +121,12 @@ client.on('message', message => {
 		message.channel.sendMessage("NSFW")
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat45.jpg')
+	{
+		message.channel.sendMessage("Aww");
+		message.channel.sendMessage("Baby bed");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat47.jpg')
 	{
         	message.channel.sendMessage("STRETCHY CONE");
