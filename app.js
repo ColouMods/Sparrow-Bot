@@ -17,11 +17,11 @@ client.on('message', message => {
 		if (message.content === "<@424679471077916682> Hi") {
 			setTimeout(() => {
 				message.channel.sendMessage("Hi.");	
-			}, 700);
+			}, 2000);
 		} else if (message.content === "How are you?") {
 			setTimeout(() => {
        				message.channel.send("OK, I guess.");
-			}, 700);
+			}, 2000);
        		}
 }
 return;
