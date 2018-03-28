@@ -29,12 +29,12 @@ return;
 //This is for responding to Chris
 client.on('message', message => {
 	if (message.author.username == "Chris Johnson") {
-		if (message.content === "<@424679471077916682>") {
-			if (message.content === "die") {
+		if (message.content.match(/<@424679471077916682>/i)) {
+			if (message.content.match(/die/i)) {
 				message.channel.sendMessage("No, Chris. Lmao.");	
 			}
-		} else if (message.content === "bot") {
-			if (message.content === "die") {
+		} else if (message.content.match(/bot/i)) {
+			if (message.content.match(/die/i)) {
 				message.channel.sendMessage("No, Chris. Lmao.");	
 			}
        		}
