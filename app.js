@@ -29,7 +29,7 @@ return;
 });
 //This is for responding to Chris
 client.on('message', message => {
-	if (message.author.username == "Chris") {
+	if (message.author.id == 333710766706524167) {
 		if (message.content.match(/<@424679471077916682>/i)) {
 			if (message.content.match(/die/i)) {
 				if (diebot == 20)
