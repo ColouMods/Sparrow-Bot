@@ -35,7 +35,7 @@ client.on('message', message => {
 				if (diebot == 20)
     				{
        					message.channel.sendMessage("Don't you think you've said that enough, Chris?");
-					var diebot = 1;
+					diebot = 1;
 					return;
     				}
 				message.channel.sendMessage("No, Chris. Lmao.");
@@ -46,7 +46,7 @@ client.on('message', message => {
 				if (diebot == 20)
     				{
        					message.channel.sendMessage("Don't you think you've said that enough, Chris?");
-					var diebot = 1;
+					diebot = 1;
 					return;
     				}
 				message.channel.sendMessage("No, Chris. Lmao.");
