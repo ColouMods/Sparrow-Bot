@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var diebot = 1;
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -10,7 +11,6 @@ client.on('ready', () => {
     /*client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
   	.then(console.log)
   	.catch(console.error);*/
-	var diebot = 1;
 });
 
 client.on('message', message => {
