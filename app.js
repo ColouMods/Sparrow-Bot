@@ -75,7 +75,18 @@ client.on('message', message => {
 		message.channel.sendMessage("same");
 	}
 	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat25.jpg')
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat17.jpg')
+	{
+		message.channel.sendMessage("He's sinking too low");
+		message.channel.sendMessage("HA");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat23.jpg')
+	{
+		message.channel.sendMessage("*BECOME THE PRESENT*");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat24.jpg')
 	{
 		message.channel.sendMessage("EYES ARE SO CUTE THO");
 		message.channel.sendMessage("YEAH");
@@ -120,6 +131,11 @@ client.on('message', message => {
 		message.channel.sendMessage("haha")
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat40.jpg')
+	{
+		message.channel.sendMessage("tongue")
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat42.jpg')
 	{
 		message.channel.sendMessage("NSFW")
@@ -154,6 +170,12 @@ client.on('message', message => {
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat53.jpg')
 	{
         	message.channel.sendMessage("SO CUTE");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat55.jpg')
+	{
+        	message.channel.sendMessage("HAHAH");
+		message.channel.sendMessage("Same");
 	}
 	
 });
@@ -231,6 +253,10 @@ client.on('message', message => {
 		else if (message.content.match(/a garden sounds fun/i))
 	{
 	message.channel.sendMessage("Brain poop, whoops.");
+	}
+		else if (message.content.match(/would you mind calming the fuck down/i))
+	{
+	message.channel.sendMessage(";-;");	
 	}
 		else if (message.content.match(/springfield nightmares/i))
 	{
