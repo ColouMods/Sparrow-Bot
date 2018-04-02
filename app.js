@@ -40,10 +40,9 @@ client.on('message', message => {
        				message.channel.sendMessage("Don't you think you've said that enough, Chris?");
 					diebot = 1;
 					return;
-    			} else if {
+    			}
 				message.channel.sendMessage("No, Chris. Lmao.");
 				diebot++;
-				}
 			}
 }
 return;
