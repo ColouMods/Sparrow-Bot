@@ -33,9 +33,8 @@ return;
 });
 //This is for responding to Chris
 client.on('message', message => {
-	if (message.author.id == 90852908509175808) {
-		if (message.content.match(/<@424679471077916682>/i)) {
-			if (message.content.match(/die/i)) {
+	if (message.author.id == 290486859480563713) {
+		if ((message.content.match(/<@424679471077916682>/i) && (message.content.match(/die/i)) || (message.content.match(/bot/i) && message.content.match(/die/i)) {)
 				if (diebot == 20)
     				{
        					message.channel.sendMessage("Don't you think you've said that enough, Chris?");
@@ -45,18 +44,6 @@ client.on('message', message => {
 				message.channel.sendMessage("No, Chris. Lmao.");
 				diebot++;
 			}
-		} else if (message.content.match(/bot/i)) {
-			if (message.content.match(/die/i)) {
-				if (diebot == 20)
-    				{
-       					message.channel.sendMessage("Don't you think you've said that enough, Chris?");
-					diebot = 1;
-					return;
-    				}
-				message.channel.sendMessage("No, Chris. Lmao.");
-				diebot++;	
-			}
-       		}
 }
 return;
 });
