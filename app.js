@@ -62,10 +62,20 @@ client.on('message', message => {
 		message.channel.sendMessage("same");
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat15.jpg')
+	{
+		message.channel.sendMessage("Curly mia");
+	}
+
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat17.jpg')
 	{
 		message.channel.sendMessage("He's sinking too low");
 		message.channel.sendMessage("HA");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat21.jpg')
+	{
+		message.channel.sendMessage("EYES");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat23.jpg')
@@ -100,6 +110,21 @@ client.on('message', message => {
 		message.channel.sendMessage("PURRITO");
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat32.jpg')
+	{
+        	message.channel.sendMessage("My poppy is growing well *ba dum tiss*");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat34.jpg')
+	{
+        	message.channel.sendMessage("Me when I'm woken up");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat35.jpg')
+	{
+        	message.channel.sendMessage("Oooh I remember that box, she was obsessive with that but we had to send it back to amazon");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat36.jpg')
 	{
 		message.channel.sendMessage("RAWR");
@@ -113,9 +138,14 @@ client.on('message', message => {
 		}
 	}
 	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat39.jpg')
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat38.jpg')
 	{
 		message.channel.sendMessage("haha")
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat39.jpg')
+	{
+		message.channel.sendMessage("Lap cat")
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat40.jpg')
