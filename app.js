@@ -189,6 +189,12 @@ client.on('message', message => {
         	message.channel.sendMessage("SO CUTE");
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat54.jpg')
+	{
+        	message.channel.sendMessage("STP");
+		message.channel.sendMessage("PLEASe");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat55.jpg')
 	{
         	message.channel.sendMessage("HAHAH");
