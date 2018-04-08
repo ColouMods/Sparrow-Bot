@@ -174,6 +174,12 @@ client.on('message', message => {
         	message.channel.sendMessage("Bag cat");
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat49.jpg')
+	{
+        	message.channel.sendMessage("aww");
+		message.channel.sendMessage("JACK IN DA ~~HOOD~~ VETS");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat51.jpg')
 	{
         	message.channel.sendMessage("AWW CONE BABy");
