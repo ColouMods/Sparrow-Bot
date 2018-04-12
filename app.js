@@ -62,6 +62,11 @@ client.on('message', message => {
 		message.channel.sendMessage("same");
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat14.jpg')
+	{
+		message.channel.sendMessage("Same");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat15.jpg')
 	{
 		message.channel.sendMessage("Curly mia");
