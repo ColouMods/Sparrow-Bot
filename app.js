@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var diebot = 1;
+greet = ["Oh hi", "Hi", "Suo"];
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -277,6 +278,10 @@ client.on('message', message => {
 	{
         message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm half-digested Sparrow.");
         }
+		else if (message.content.match(/hi/i) || message.content.match(/hello/i) || message.content.match(/hey/i))
+	{
+  	message.channel.sendMessage(greet[Math.floor(Math.random() * mention.length)]);
+  	}
 		else if (message.content.match(/war is good for absolutely nothing/i))
 	{
         message.channel.sendMessage("Haha");
