@@ -110,6 +110,11 @@ client.on('message', message => {
 		message.channel.sendMessage("When you realise you're a cat");
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat30.jpg')
+	{
+		message.channel.sendMessage("Same");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
 	{
         	message.channel.sendMessage("AwW");
