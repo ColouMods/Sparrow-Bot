@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var diebot = 1;
-greet = ["Oh hi", "Hi", "Suo"];
+greet = ["Oh hi", "Hi", "Sup"];
 
 client.on('ready', () => {
     console.log('I am ready!');
