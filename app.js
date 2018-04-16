@@ -280,7 +280,7 @@ client.on('message', message => {
         }
 		else if (message.content.match(/hi/i) || message.content.match(/hello/i) || message.content.match(/hey/i))
 	{
-  	message.channel.sendMessage(greet[Math.floor(Math.random() * mention.length)]);
+  	message.channel.sendMessage(greet[Math.floor(Math.random() * greet.length)]);
   	}
 		else if (message.content.match(/war is good for absolutely nothing/i))
 	{
