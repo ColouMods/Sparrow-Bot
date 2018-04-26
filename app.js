@@ -63,10 +63,23 @@ client.on('message', message => {
 		message.channel.sendMessage("same");
 	}
 	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat11.jpg')
+	{
+		message.channel.sendMessage("Scratchy");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat13.jpg')
+	{
+		message.channel.sendMessage("She was only 1 in this pic, she's 3 now :tjo:");
+		message.channel.sendMessage("Aww");
+	}
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat14.jpg')
 	{
 		message.channel.sendMessage("Same");
 	}
+	
+	
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat15.jpg')
 	{
@@ -87,6 +100,11 @@ client.on('message', message => {
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat23.jpg')
 	{
 		message.channel.sendMessage("*BECOME THE PRESENT*");
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat22.jpg')
+	{
+		message.channel.sendMessage("Why are most of these Mia?");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat24.jpg')
@@ -167,6 +185,12 @@ client.on('message', message => {
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat42.jpg')
 	{
 		message.channel.sendMessage("NSFW")
+	}
+	
+	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat44.jpg')
+	{
+		message.channel.sendMessage("It's like a fucking western.");
+		message.channel.sendMessage("Like Dash staring and Mia and Mia staring at Dash like wtf you in my house for");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat45.jpg')
