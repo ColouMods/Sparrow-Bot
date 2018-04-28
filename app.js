@@ -290,6 +290,13 @@ client.on('message', message => {
 		return;
     	}
 	
+	if (message.content.match(/window frames/i))
+    	{
+        message.channel.sendMessage("WHAT TF");
+	message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/WHATTF.png");
+		return;
+    	}
+	
 	if (message.content.match(/lol/i) ||
 	    message.content.match(/lmfao/i) ||
 	    message.content.match(/lmao/i) ||
