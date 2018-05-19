@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var diebot = 1;
 greet = ["Oh hi", "Hi", "Sup"];
-
+//this is just to check if she'll come back online
 client.on('ready', () => {
     console.log('I am ready!');
     //client.user.setActivity('Sims 2 Ultimate Collection', { type: 'PLAYING' });
