@@ -15,6 +15,12 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+	if (message.author.id == 290486859480563713) {
+       	message.author.sendMessage("Hi.");
+	}
+});
+
+client.on('message', message => {
 	if (message.author.bot == true) {
 		if (message.content === "<@424679471077916682> Hi") {
 			message.channel.startTyping();
