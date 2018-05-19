@@ -16,7 +16,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if (message.author.id == 90852908509175808) {
-       	message.author.sendMessage("Hi.");
+       	message.author.sendMessage("Hi Chris lmao");
 	}
 });
 
