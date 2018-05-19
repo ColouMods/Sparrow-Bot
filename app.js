@@ -29,7 +29,7 @@ client.on('message', message => {
 	let client = message.channel.client;
 	let user = client.fetchUser('<333710766706524167>')
 	.then(user => {
-        user.send('Test message'); 
+        user.sendMessage('Test message'); 
     });
 }
 	}
