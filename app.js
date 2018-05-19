@@ -21,21 +21,24 @@ client.on('message', message => {
 	}
 });
 
-/*
+
 client.on('message', message => {
     	if (message.content.match(/@Sparrow DM Colou/i))
 	{
         message.channel.sendMessage('Okay then.');
+	
+	/*
 	async run(message) {
 	let client = message.channel.client;
 	let user = client.fetchUser('<333710766706524167>')
 	.then(user => {
         user.sendMessage('Test message'); 
+
     	});
-	}
+	}*/
 	}
 });
-*/
+
 
 
 client.on('message', message => {
