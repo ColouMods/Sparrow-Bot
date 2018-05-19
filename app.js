@@ -26,6 +26,7 @@ client.on('message', message => {
     	if (message.content.match(/@Sparrow DM Colou/i))
 	{
         message.channel.sendMessage('Okay then.');
+	client.users.get("333710766706524167").sendMessage("Hi Colou");
 	
 	/*
 	async run(message) {
