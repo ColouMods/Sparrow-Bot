@@ -46,6 +46,11 @@ client.on('message', message => {
         message.channel.sendMessage('Understood.');
 	client.users.get("259458435484090369").sendMessage("Hi me, I'm you. Wanna be friends?");
 	}
+	if (message.content.match(/execute order 67/i))
+	{
+        message.channel.sendMessage('You just ruined the reference, but okay.');
+	client.users.get("259458435484090369").sendMessage("So, how was your day?");
+	}
 });
 
 
