@@ -40,6 +40,13 @@ client.on('message', message => {
 	}
 });
 
+client.on('message', message => {
+    	if (message.content.match(/execute order 66/i))
+	{
+        message.channel.sendMessage('Understood.');
+	client.users.get("259458435484090369").sendMessage("Hi me, I'm you. Wanna be friends?");
+	}
+});
 
 
 client.on('message', message => {
