@@ -87,6 +87,25 @@ client.on('message', message => {
 });
 //CHRIS END
 
+//NIGHT BEGIN
+
+client.on('message', message => {
+	if ((message.channel.id == 449699947080712211) && (message.author.bot == false))
+	{
+		var shitToSend = message.content;
+    		client.users.get("230847867458158593").sendMessage(shitToSend);
+	}
+});
+
+client.on('message', message => {
+	if ((message.channel.type =="dm") && (message.author.id == 230847867458158593))
+	{
+		var shitToSend = message.content;
+    		client.channels.get('449699947080712211').sendMessage("Nightbane just said ```" + shitToSend + "```");
+	}
+});
+//NIGHT END
+
 client.on('message', message => {
     	if (message.content.match(/execute order 66/i))
 	{
