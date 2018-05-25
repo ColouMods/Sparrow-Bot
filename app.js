@@ -106,6 +106,25 @@ client.on('message', message => {
 });
 //NIGHT END
 
+//WILL BEGIN
+
+client.on('message', message => {
+	if ((message.channel.id == 449705781298987008) && (message.author.bot == false))
+	{
+		var shitToSend = message.content;
+    		client.users.get("188248640635011072").sendMessage(shitToSend);
+	}
+});
+
+client.on('message', message => {
+	if ((message.channel.type =="dm") && (message.author.id == 188248640635011072))
+	{
+		var shitToSend = message.content;
+    		client.channels.get('449705781298987008').sendMessage("Will just said ```" + shitToSend + "```");
+	}
+});
+//WILL END
+
 client.on('message', message => {
     	if (message.content.match(/execute order 66/i))
 	{
