@@ -74,15 +74,15 @@ client.on('message', message => {
 	if ((message.channel.id == 449683861664956426) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.users.get("259458435484090369").sendMessage(shitToSend);
+    		client.users.get("290486859480563713").sendMessage(shitToSend);
 	}
 });
 
 client.on('message', message => {
-	if ((message.channel.type =="dm") && (message.author.id == 90852908509175808))
+	if ((message.channel.type =="dm") && (message.author.id == 290486859480563713))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('90852908509175808').sendMessage("Chris just said ```" + shitToSend + "```");
+    		client.channels.get('449683861664956426').sendMessage("Chris just said ```" + shitToSend + "```");
 	}
 });
 //CHRIS END
