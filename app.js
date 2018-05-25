@@ -21,6 +21,13 @@ client.on('ready', () => {
 //	}
 //});
 
+client.on('message', message => {
+	if (message.content.match(/bot/i) && message.content.match(/cancer/i))
+	{
+	message.channel.sendMessage("Nah mate");
+	message.channel.sendMessage("You're cancer");
+	}
+});
 
 client.on('message', message => {
     	if (message.content.match(/@Sparrow DM Colou/i))
