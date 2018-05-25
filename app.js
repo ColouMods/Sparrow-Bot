@@ -68,13 +68,7 @@ client.on('message', message => {
 	}
 });
 
-client.users.get("290486859480563713").on('message', message => {
-	if (message.author.bot == false)
-	{
-		var shitToSend = message.content;
-    		client.channels.get('449617271258742784').sendMessage(shitToSend);
-	}
-});
+
 
 client.on('message', message => {
     	if (message.content.match(/execute order 66/i))
