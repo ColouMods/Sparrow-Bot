@@ -61,6 +61,13 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+	if (message.channel.id == 449617271258742784)
+	{
+    		message.channel.sendMessage('Test.');
+	}
+});
+
+client.on('message', message => {
     	if (message.content.match(/execute order 66/i))
 	{
         message.channel.sendMessage('Understood.');
