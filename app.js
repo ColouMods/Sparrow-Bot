@@ -71,6 +71,8 @@ client.on('message', message => {
         message.channel.sendMessage('You just ruined the reference, but okay.');
 	client.users.get("259458435484090369").sendMessage("So, how was your day?");
 	}
+	if (message.content.match(/@Sparrow Chris is broken/i))
+	client.channels.get('424212795970551808').sendMessage('Uh oh, I broke him.')
 });
 
 
