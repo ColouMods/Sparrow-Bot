@@ -64,7 +64,7 @@ client.on('message', message => {
 	if ((message.channel.id == 449617271258742784) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		message.channel.sendMessage(shitToSend);
+    		client.channels.get('449617271258742784').sendMessage(shitToSend);
 	}
 });
 
