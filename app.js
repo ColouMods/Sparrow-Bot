@@ -73,6 +73,8 @@ client.on('message', message => {
 	}
 	if (message.content.match(/@Sparrow Chris is broken/i))
 	client.channels.get('424212795970551808').sendMessage('Uh oh, I broke him.')
+	if (message.content.match(/@Sparrow Cloou is broken/i))
+	client.channels.get('424212795970551808').sendMessage('Whoops, posted twice.')
 });
 
 
