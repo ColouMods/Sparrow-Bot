@@ -61,9 +61,9 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-	if (message.channel.id == 449617271258742784)
+	if ((message.channel.id == 449617271258742784) && (message.author.bot == false))
 	{
-    		//message.channel.sendMessage('Test.');
+    		message.channel.sendMessage('Test.');
 	}
 });
 
