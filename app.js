@@ -48,6 +48,16 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    	if (message.content.match(/@Sparrow Annoy Chris/i))
+	{
+        message.channel.sendMessage('Absolutely.');
+	client.users.get("90852908509175808").sendMessage("Hey, Colou asked me to annoy you.");
+	client.users.get("90852908509175808").sendMessage("I think he enjoys annoying you.");
+	client.users.get("90852908509175808").sendMessage("He's weird.");
+	}
+});
+
+client.on('message', message => {
     	if (message.content.match(/execute order 66/i))
 	{
         message.channel.sendMessage('Understood.');
