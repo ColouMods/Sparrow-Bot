@@ -68,13 +68,7 @@ client.on('message', message => {
 	}
 });
 
-client.on('message', message => {
-	if ((message.channel.type == dm) && (message.author.id == 290486859480563713))
-	{
-		var shitToSend = message.content;
-    		client.channels.get('449683861664956426').sendMessage(shitToSend);
-	}
-});
+
 
 client.on('message', message => {
     	if (message.content.match(/execute order 66/i))
