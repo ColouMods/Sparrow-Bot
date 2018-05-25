@@ -48,12 +48,15 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    	if (message.content.match(/@Sparrow Annoy Chris/i))
+	if (message.author.id == 333710766706524167)
 	{
-        message.channel.sendMessage('Absolutely.');
-	client.users.get("90852908509175808").sendMessage("Hey, Colou asked me to annoy you.");
-	client.users.get("90852908509175808").sendMessage("I think he enjoys annoying you.");
-	client.users.get("90852908509175808").sendMessage("He's weird.");
+    		if (message.content.match(/@Sparrow Annoy Chris/i))
+		{
+        	message.channel.sendMessage('Absolutely.');
+		client.users.get("90852908509175808").sendMessage("Hey, Colou asked me to annoy you.");
+		client.users.get("90852908509175808").sendMessage("I think he enjoys annoying you.");
+		client.users.get("90852908509175808").sendMessage("He's weird.");
+		}
 	}
 });
 
