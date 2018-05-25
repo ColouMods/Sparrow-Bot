@@ -134,7 +134,7 @@ client.on('message', message => {
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat13.jpg')
 	{
-		message.channel.sendMessage("She was only 1 in this pic, she's 3 now :tjo:");
+		message.channel.sendMessage("She was only 1 in this pic, she's 3 now <:tjo:425348087461183488>");
 		message.channel.sendMessage("Aww");
 	}
 	
