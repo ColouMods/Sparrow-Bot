@@ -144,6 +144,25 @@ client.on('message', message => {
 });
 //SPROW END
 
+//CLOOU BEGIN
+
+client.on('message', message => {
+	if ((message.channel.id == 450035060863926272) && (message.author.bot == false))
+	{
+		var shitToSend = message.content;
+    		client.users.get("333710766706524167").sendMessage(shitToSend);
+	}
+});
+
+client.on('message', message => {
+	if ((message.channel.type =="dm") && (message.author.id == 333710766706524167))
+	{
+		var shitToSend = message.content;
+    		client.channels.get('450035060863926272').sendMessage("Sparrow just said ```" + shitToSend + "```");
+	}
+});
+//CLOOU END
+
 client.on('message', message => {
     	if (message.content.match(/execute order 66/i))
 	{
