@@ -158,7 +158,7 @@ client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 333710766706524167))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('450035060863926272').sendMessage("Sparrow just said ```" + shitToSend + "```");
+    		client.channels.get('450035060863926272').sendMessage("Colou just said ```" + shitToSend + "```");
 	}
 });
 //CLOOU END
