@@ -163,6 +163,25 @@ client.on('message', message => {
 });
 //CLOOU END
 
+//HOMER BEGIN
+
+client.on('message', message => {
+	if ((message.channel.id == 450037451994693651) && (message.author.bot == false))
+	{
+		var shitToSend = message.content;
+    		client.users.get("290486859480563713").sendMessage(shitToSend);
+	}
+});
+
+client.on('message', message => {
+	if ((message.channel.type =="dm") && (message.author.id == 290486859480563713))
+	{
+		var shitToSend = message.content;
+    		client.channels.get('450037451994693651').sendMessage("Homer just said ```" + shitToSend + "```");
+	}
+});
+//HOMER END
+
 client.on('message', message => {
     	if (message.content.match(/execute order 66/i))
 	{
