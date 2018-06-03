@@ -69,7 +69,7 @@ client.on('message', message => {
 });
 //secret
 client.on('message', message => {
-	if ((message.channel.id == 452827692484657162) && (message.author.bot == false))
+	if ((message.channel.id == 452827828103151616) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
     		client.channels.get('447499927220781068').sendMessage(shitToSend);
