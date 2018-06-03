@@ -59,12 +59,20 @@ client.on('message', message => {
 		}
 	}
 });
-
+//memes and shit
 client.on('message', message => {
 	if ((message.channel.id == 449617271258742784) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
     		client.channels.get('424212795970551808').sendMessage(shitToSend);
+	}
+});
+//secret
+client.on('message', message => {
+	if ((message.channel.id == 452827692484657162) && (message.author.bot == false))
+	{
+		var shitToSend = message.content;
+    		client.channels.get('447499927220781068').sendMessage(shitToSend);
 	}
 });
 
