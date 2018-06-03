@@ -75,6 +75,14 @@ client.on('message', message => {
     		client.channels.get('447499927220781068').sendMessage(shitToSend);
 	}
 });
+//hwwotw general
+client.on('message', message => {
+	if ((message.channel.id == 452839469779779596) && (message.author.bot == false))
+	{
+		var shitToSend = message.content;
+    		client.channels.get('422215368782643202').sendMessage(shitToSend);
+	}
+});
 
 //CHRIS BEGIN
 
