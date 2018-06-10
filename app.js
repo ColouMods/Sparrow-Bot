@@ -4,7 +4,8 @@ var diebot = 1;
 greet = ["Oh hi", "Hi", "Sup"];
 //this is just to check if she'll come back online
 client.on('ready', () => {
-    console.log('I am ready!');
+	console.log('I am ready!');
+	client.channels.get('449616538358513698').sendMessage("I've updated!");
     //client.user.setActivity('Sims 2 Ultimate Collection', { type: 'PLAYING' });
     /*client.user.setActivity('YouTube', { type: 'WATCHING' })
   	.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
