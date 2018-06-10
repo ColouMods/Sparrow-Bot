@@ -84,6 +84,15 @@ client.on('message', message => {
 	}
 });
 
+//sprows mod server general
+client.on('message', message => {
+	if ((message.channel.id == 455383264547569676) && (message.author.bot == false))
+	{
+		var shitToSend = message.content;
+    		client.channels.get('454685400699502594').sendMessage(shitToSend);
+	}
+});
+
 //CHRIS BEGIN
 
 client.on('message', message => {
