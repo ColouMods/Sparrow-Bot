@@ -488,6 +488,11 @@ client.on('message', message => {
     	{
         message.channel.sendMessage("I used to be a renegade :skull: , I used to :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: <:catThink:434451031145840641>  :sweat_drops:  around :arrow_heading_up: :repeat: \nBut I couldn't take the punishment :alarm_clock:  :house_abandoned:, and had to settle down :house: :arrow_down: \nNow I'm playing it real straight :arrow_right:  , and :regional_indicator_y: :regional_indicator_e: :regional_indicator_s: I  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: my BEES :bee: \nYou might :thinking: I'm crazy, but I don't even care :no_entry_sign: \nBecause I can tell what's going on :ok: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee:");
 	}
+	dreamNum = (Math.floor(Math.random() * 200)+1);
+	if (dreamNum == 1)
+    	{
+        message.channel.sendMessage("");
+	}
 	
 	
 	if (message.content.match(/cat/i)) 
