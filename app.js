@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var diebot = 1;
 greet = ["Oh hi", "Hi", "Sup"];
+lolrej = '"lol rejected"';
+bitch = '"Damn Kelly was such a bitch lmao"';
 //this is just to check if she'll come back online
 client.on('ready', () => {
 	console.log('I am ready!');
@@ -489,9 +491,9 @@ client.on('message', message => {
         message.channel.sendMessage("I used to be a renegade :skull: , I used to :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: <:catThink:434451031145840641>  :sweat_drops:  around :arrow_heading_up: :repeat: \nBut I couldn't take the punishment :alarm_clock:  :house_abandoned:, and had to settle down :house: :arrow_down: \nNow I'm playing it real straight :arrow_right:  , and :regional_indicator_y: :regional_indicator_e: :regional_indicator_s: I  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: my BEES :bee: \nYou might :thinking: I'm crazy, but I don't even care :no_entry_sign: \nBecause I can tell what's going on :ok: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee:");
 	}
 	dreamNum = (Math.floor(Math.random() * 200)+1);
-	if (dreamNum == 1)
+	if (dreamNum == 1 || message.author.id==290486859480563713) 
     	{
-        message.channel.sendMessage("");
+        message.channel.sendMessage("I had one last night. I failed my A-Levels with DEP. No idea what the P grade was but it must have been bad because I cried pretty bad over it. UCAS track had Coventry marked as " + lolrej + " and I had to start retakes that day. It was the most disappointing thing because I didn't have Adrian, I had Kelly. Those of you who talked to me last year will know who she is. (Those who don't, media teacher from first year). She was her usual annoying, scary self and I ended up crying when she walked into the room. The dream ended with her finding my old revision as she was throwing it out and saw it said " + bitch);
 	}
 	
 	
