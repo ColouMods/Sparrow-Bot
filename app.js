@@ -25,7 +25,7 @@ client.on('ready', () => {
 //});
 
 client.on("guildCreate", guild => {
-    client.channels.find("name", "shar-general").sendMessage("I don't know if this is the place to introduce youself, but hi!");
+    guild.channels.find("name", "shar-general").sendMessage("I don't know if this is the place to introduce youself, but hi!");
 });
 
 client.on('message', message => {
