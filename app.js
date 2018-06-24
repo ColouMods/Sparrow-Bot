@@ -513,7 +513,7 @@ client.on('message', message => {
 	else if (wrongNum == 1){
 		wrongChannel = (Math.floor(Math.random() * sendChannels.length)+1);
 		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-		message.wrongChannel.sendMessage(wrongChannel);
+		message.channel.sendMessage(wrongChannel);
 		return;
 	}
 	}
