@@ -513,8 +513,8 @@ client.on('message', message => {
 	else if (wrongNum == 1){
 		wrongChannel = (Math.floor(Math.random() * sendChannels.length));
 		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-		client.channels.get('wrongChannel').sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
-       		client.channels.get('wrongChannel').send("Whoops, wrong server.");
+		client.channels.get(wrongChannel).sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
+       		client.channels.get(wrongChannel).send("Whoops, wrong server.");
 		return;
 	}
 	}
