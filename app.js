@@ -511,11 +511,7 @@ client.on('message', message => {
 		return;
 	}
 	else if (wrongNum == 1){
-			wrongChannel = (Math.floor(Math.random() * sendChannels.length));
-		if (wrongChannel.guild_id == message.guild.id)
-		{
-			wrongChannel = (Math.floor(Math.random() * sendChannels.length));
-		}
+		wrongChannel = (Math.floor(Math.random() * sendChannels.length)+1);
 		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
 		message.wrongChannel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
 		return;
