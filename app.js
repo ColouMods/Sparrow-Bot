@@ -518,7 +518,7 @@ client.on('message', message => {
 		msgChannel = sendChannels[wrongChannel];
 		client.channels.get(msgChannel).sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
        		//if (sendChannels[wrongChannel].guild_id != rightChannel.guild_id) {
-		client.channels.get(msgChannel).send(msgChannel.guild_id +", " + rightChannel);	
+		client.channels.get(msgChannel).send(msgChannel.guild.id +", " + rightChannel);	
 		//client.channels.get(sendChannels[wrongChannel]).send("Whoops, wrong server.");
 		//}
 		return;
