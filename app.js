@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var diebot = 1;
 greet = ["Oh hi", "Hi", "Sup"];
+sendChannels = ["447499927220781068", "449616538358513698"];
 lolrej = '"lol rejected"';
 bitch = '"Damn Kelly was such a bitch lmao"';
 //this is just to check if she'll come back online
@@ -501,12 +502,25 @@ client.on('message', message => {
 	}
 	
 	
-	if (message.content.match(/cat/i)) 
-        {
+	if (message.content.match(/cat/i)) {
+    	wrongNum = (Math.floor(Math.random() * 2)+1);
+	if (wrongNum != 1)
+	{
 		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-        message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
+		message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
 		return;
-	}	
+	}
+	else if (wrongNum == 1){
+			wrongChannel = (Math.floor(Math.random() * sendChannels.length));
+		if (wrongChannel.guild_id == message.guild.id)
+		{
+			wrongChannel = (Math.floor(Math.random() * sendChannels.length));
+		}
+		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+		message.wrongChannel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
+		return;
+	}
+	}
 	if (message.content.match(/kitchen nightmares/i) ||
 	    message.content.match(/lamb sauce/i) ||
 	    message.content.match(/gordon/i) ||
