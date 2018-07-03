@@ -501,8 +501,8 @@ client.on('message', message => {
         message.channel.sendMessage("I had one last night. I failed my A-Levels with DEP. No idea what the P grade was but it must have been bad because I cried pretty bad over it. UCAS track had Coventry marked as " + lolrej + " and I had to start retakes that day. It was the most disappointing thing because I didn't have Adrian, I had Kelly. Those of you who talked to me last year will know who she is. (Those who don't, media teacher from first year). She was her usual annoying, scary self and I ended up crying when she walked into the room. The dream ended with her finding my old revision as she was throwing it out and saw it said " + bitch);
 	}
 	
-	
-	if (message.content.match(/cat/i)) {
+	//for servers only, DMs will not have the wrong channel feature
+	if (message.content.match(/cat/i) && message.channel.type != "dm") {
     	wrongNum = (Math.floor(Math.random() * 2)+1);
 	rightChannel = message.guild.id;
 	if (wrongNum != 1)
@@ -525,6 +525,13 @@ client.on('message', message => {
 		return;
 	}
 	}
+	//this cat code is DM specific, as the wrong channel feature would cause a crash
+	if (message.content.match(/cat/i) && message.channel.type == "dm") {
+		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+		message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
+		return;
+	}
+	
 	if (message.content.match(/kitchen nightmares/i) ||
 	    message.content.match(/lamb sauce/i) ||
 	    message.content.match(/gordon/i) ||
