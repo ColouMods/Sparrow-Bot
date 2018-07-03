@@ -503,7 +503,7 @@ client.on('message', message => {
 	
 	//for servers only, DMs will not have the wrong channel feature
 	if (message.content.match(/cat/i) && message.channel.type != "dm") {
-    	wrongNum = (Math.floor(Math.random() * 2)+1);
+    	wrongNum = (Math.floor(Math.random() * 50)+1);
 	rightChannel = message.guild.id;
 	if (wrongNum != 1)
 	{
