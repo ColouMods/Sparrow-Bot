@@ -577,7 +577,13 @@ client.on('message', message => {
 	message.channel.sendMessage("No");
 	message.channel.sendMessage("Off to bed*");
         }
-		else if (message.content.match(/a garden sounds fun/i))
+	else if (message.content.match(/what is the current acis release/i)) {
+	    message.channel.sendMessage("Don't do it, don't play it.");
+	    setTimeout(() => { 
+			message.channel.send('Please.');
+		}, 6000);
+	}
+	else if (message.content.match(/a garden sounds fun/i))
 	{
 	message.channel.sendMessage("Brain poop, whoops.");
 	}
