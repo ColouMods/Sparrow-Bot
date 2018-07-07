@@ -566,6 +566,15 @@ client.on('message', message => {
 	{
         message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm half-digested Sparrow.");
         }
+		else if (
+			(message.content.match(/make cloou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
+			(message.content.match(/convert cloou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
+			(message.content.match(/make colou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
+			(message.content.match(/convert colou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i))
+			)
+	{
+        message.channel.sendMessage("boolprop cloou false");
+    	}
 		else if (message.content.match(/hi/i) || message.content.match(/hello/i) || message.content.match(/hey/i))
 	{
   	message.channel.sendMessage(greet[Math.floor(Math.random() * greet.length)]);
