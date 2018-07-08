@@ -559,7 +559,10 @@ client.on('message', message => {
 		return;
     	}
 
-	
+	if (message.content.match(/mute sparrow bot/i)) {
+		message.channel.sendMessage(";-;");
+		return;
+	}
 		//This is her mention code
 	if (message.content.match(/@sparrow/i))
 		if (message.content.match(/view github/i))
