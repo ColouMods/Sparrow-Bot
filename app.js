@@ -562,10 +562,10 @@ client.on('message', message => {
 	if (message.content.match(/mute sparrow bot/i)) {
 		threeEyedSprow = (Math.floor(Math.random() * 50) + 1);
 		if (threeEyedSprow == 1) {
-			message.channel.sendMessage(";-;");
-		} else {
 			message.channel.sendMessage(";-;;");
-			}
+		} else {
+			message.channel.sendMessage(";-;");
+		}
 		return;
 	}
 		//This is her mention code
