@@ -568,6 +568,10 @@ client.on('message', message => {
 		}
 		return;
 	}
+	
+	if ((message.content.match(/1 in 4000/i)) || ((message.content.match(/tmsm/i) && message.content.match(/crash/i))) ) {
+		message.channel.sendMessage("OH GOD\nit was my own fault Liquid's game kept crashing.\nI didn't convert it right.\nIt crashes the game.\nI blamed\nRadical for something that is my fault\nI fucked up Liquid's stream");
+	}
 		//This is her mention code
 	if (message.content.match(/@sparrow/i))
 		if (message.content.match(/view github/i))
