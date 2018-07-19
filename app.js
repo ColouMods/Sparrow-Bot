@@ -8,6 +8,7 @@ bitch = '"Damn Kelly was such a bitch lmao"';
 //this is just to check if she'll come back online
 client.on('ready', () => {
 	console.log('I am ready!');
+	client.user.setActivity({game: {name: "Sims 2 Ultimate Collection", type: 0}});
 	client.channels.get('449616538358513698').sendMessage("I've updated!");
     //client.user.setActivity('Sims 2 Ultimate Collection', { type: 'PLAYING' });
     /*client.user.setActivity('YouTube', { type: 'WATCHING' })
