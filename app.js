@@ -271,6 +271,8 @@ return;
 
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 client.on('message', message => {
+	if (message.author.id == 424679471077916682) {
+	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat1.jpg' ||
 		message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat5.jpg'
 		)
@@ -462,6 +464,7 @@ client.on('message', message => {
 		message.channel.sendMessage("Same");
 	}
 	
+	}	
 });
 //THIS IS MORE GENERAL STUFF.
 client.on('message', message => {
