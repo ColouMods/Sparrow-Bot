@@ -31,6 +31,31 @@ client.on("guildCreate", guild => {
 });
 
 client.on('message', message => {
+	if (message.author.id == 424318662674087946 && message.content.match(/brotato/i)) { 
+		broCount = 10;
+		message.channel.send("Lmao");
+	}
+	//gives RNG 10 chances to make her randomly repeat part of Larry Boy's message
+	
+	if (broCount > 0) {
+		broMode = 1;
+		broCount--;
+	} else {
+		broMode = 0;
+	}
+	//decrements broCount, using up one of the 10 chances
+	
+	if (broMode = 1) {
+		brotato = (Math.floor(Math.random() * 10)+1);
+		if (brotato == 1) {
+			message.channel.sendMessage("yo whaddup my brotato");
+			broCount = 0;
+			broMode = 0;
+		}	
+	}
+}
+
+client.on('message', message => {
 	if (message.content.match(/bot/i) && message.content.match(/cancer/i))
 	{
 	message.channel.sendMessage("Nah mate");
