@@ -546,6 +546,12 @@ client.on('message', message => {
 		return;
     	}
 	
+	if (message.content.match(/send help/i)) {
+    		message.channel.send("Help.");
+		//Haha get it she sends "Help."
+		//I don't even know if that was the joke Sprow was making, she's so confusing. ;-;
+	}
+	
 	if (message.content.match(/window frames/i))
     	{
         message.channel.sendMessage("WHAT TF");
