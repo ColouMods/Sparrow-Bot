@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var diebot = 1;
+var broMode;
+var broCount;
 greet = ["Oh hi", "Hi", "Sup"];
 sendChannels = ["447499927220781068", "449616538358513698"];
 lolrej = '"lol rejected"';
