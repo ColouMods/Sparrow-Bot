@@ -53,7 +53,7 @@ client.on('message', message => {
 			broMode = 0;
 		}	
 	}
-}
+});
 
 client.on('message', message => {
 	if (message.content.match(/bot/i) && message.content.match(/cancer/i))
