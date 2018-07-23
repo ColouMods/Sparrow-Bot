@@ -39,7 +39,7 @@ client.on('message', message => {
 	}
 	//gives RNG 10 chances to make her randomly repeat part of Larry Boy's message
 	
-	if (broCount > 0) {
+	if (broCount >= 1) {
 		broMode = 1;
 		broCount--;
 	} else {
@@ -47,7 +47,7 @@ client.on('message', message => {
 	}
 	//decrements broCount, using up one of the 10 chances
 	
-	if (broMode = 1) {
+	if (broMode == 1) {
 		brotato = (Math.floor(Math.random() * 10)+1);
 		if (brotato == 1) {
 			message.channel.sendMessage("yo whaddup my brotato");
