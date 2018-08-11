@@ -12,6 +12,10 @@ client.on('ready', () => {
 	console.log('I am ready!');
 	// this actually works, just commenting it: client.user.setPresence({game: {name: "The Sims 2 Ultimate Collection", type: 0}});
 	client.channels.get('449616538358513698').sendMessage("I've updated!");
+	client.user.setStatus('dnd');
+	setTimeout(() => { 
+		client.user.setStatus('online');
+	}, 1000);
     //client.user.setActivity('Sims 2 Ultimate Collection', { type: 'PLAYING' });
     /*client.user.setActivity('YouTube', { type: 'WATCHING' })
   	.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
