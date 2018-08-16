@@ -634,16 +634,16 @@ client.on('message', message => {
   	}
 		else if (message.content.match(/war is good for absolutely nothing/i))
 	{
-        message.channel.sendMessage("Haha");
+	message.channel.sendMessage("Haha");
 	message.channel.sendMessage("Right, I'm afraid I'm odd");
 	message.channel.sendMessage("No");
 	message.channel.sendMessage("Off to bed*");
         }
-	else if (message.content.match(/what is the current acis release/i)) {
-	    message.channel.sendMessage("Don't do it, don't play it.");
-	    setTimeout(() => { 
-			message.channel.send('Please.');
-		}, 6000);
+		else if (message.content.match(/what is the current acis release/i)) {
+	message.channel.sendMessage("Don't do it, don't play it.");
+	setTimeout(() => { 
+		message.channel.send('Please.');
+	}, 6000);
 	}
 	else if (message.content.match(/a garden sounds fun/i))
 	{
