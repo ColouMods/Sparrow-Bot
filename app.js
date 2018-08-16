@@ -632,13 +632,6 @@ client.on('message', message => {
 	{
   	message.channel.sendMessage(greet[Math.floor(Math.random() * greet.length)]);
   	}
-		else if (message.content.match(/war is good for absolutely nothing/i))
-	{
-	message.channel.sendMessage("Haha");
-	message.channel.sendMessage("Right, I'm afraid I'm odd");
-	message.channel.sendMessage("No");
-	message.channel.sendMessage("Off to bed*");
-        }
 		else if (message.content.match(/what is the current acis release/i)) {
 	message.channel.sendMessage("Don't do it, don't play it.");
 	setTimeout(() => { 
@@ -649,6 +642,13 @@ client.on('message', message => {
 	{
 	message.channel.sendMessage("Brain poop, whoops.");
 	}
+		else if (message.content.match(/war is good for absolutely nothing/i))
+	{
+	message.channel.sendMessage("Haha");
+	message.channel.sendMessage("Right, I'm afraid I'm odd");
+	message.channel.sendMessage("No");
+	message.channel.sendMessage("Off to bed*");
+        }
 		else if (message.content.match(/would you mind calming the fuck down/i))
 	{
 	message.channel.sendMessage(";-;");	
