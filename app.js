@@ -628,6 +628,13 @@ client.on('message', message => {
 	{
         message.channel.sendMessage("boolprop cloou false");
     	}
+		else if (message.content.match(/war is good for absolutely nothing/i))
+	{
+	message.channel.sendMessage("Haha");
+	message.channel.sendMessage("Right, I'm afraid I'm odd");
+	message.channel.sendMessage("No");
+	message.channel.sendMessage("Off to bed*");
+        }
 		else if (message.content.match(/hi/i) || message.content.match(/hello/i) || message.content.match(/hey/i))
 	{
   	message.channel.sendMessage(greet[Math.floor(Math.random() * greet.length)]);
@@ -642,13 +649,6 @@ client.on('message', message => {
 	{
 	message.channel.sendMessage("Brain poop, whoops.");
 	}
-		else if (message.content.match(/war is good for absolutely nothing/i))
-	{
-	message.channel.sendMessage("Haha");
-	message.channel.sendMessage("Right, I'm afraid I'm odd");
-	message.channel.sendMessage("No");
-	message.channel.sendMessage("Off to bed*");
-        }
 		else if (message.content.match(/would you mind calming the fuck down/i))
 	{
 	message.channel.sendMessage(";-;");	
