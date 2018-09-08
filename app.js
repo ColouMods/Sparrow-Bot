@@ -11,7 +11,7 @@ bitch = '"Damn Kelly was such a bitch lmao"';
 client.on('ready', () => {
 	console.log('I am ready!');
 	// this actually works, just commenting it: client.user.setPresence({game: {name: "The Sims 2 Ultimate Collection", type: 0}});
-	client.channels.get('449616538358513698').sendMessage("I've updated!");
+	// client.channels.get('449616538358513698').sendMessage("I've updated!");
 	client.user.setStatus('dnd');
 	setTimeout(() => { 
 		client.user.setStatus('online');
