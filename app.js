@@ -17,13 +17,13 @@ client.on('ready', () => {
 	setTimeout(() => { 
 		client.user.setStatus('online');
 	}, 1000);
-    //client.user.setActivity('Sims 2 Ultimate Collection', { type: 'PLAYING' });
-    /*client.user.setActivity('YouTube', { type: 'WATCHING' })
-  	.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-  	.catch(console.error);*/
-    /*client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
-  	.then(console.log)
-  	.catch(console.error);*/
+	//client.user.setActivity('Sims 2 Ultimate Collection', { type: 'PLAYING' });
+	/*client.user.setActivity('YouTube', { type: 'WATCHING' })
+	.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+	.catch(console.error);*/
+	/*client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
+	.then(console.log)
+	.catch(console.error);*/
 });
 
 //client.on('message', message => {
@@ -49,11 +49,11 @@ client.on("guildCreate", guild => {
 });
 
 client.on('message', message => {
+	// if Loren Bot says brotato, give RNG 10 chances to make her randomly repeat part of his message
 	if (message.author.id == 424318662674087946 && message.content.match(/brotato/i)) { 
 		broCount = 10;
 		message.channel.send("Lmao");
 	}
-	//gives RNG 10 chances to make her randomly repeat part of Larry Boy's message
 	
 	if (broCount >= 1) {
 		broMode = 1;
@@ -61,12 +61,12 @@ client.on('message', message => {
 	} else {
 		broMode = 0;
 	}
-	//decrements broCount, using up one of the 10 chances
 	
 	if (broMode == 1) {
 		brotato = (Math.floor(Math.random() * 10)+1);
 		if (brotato == 1) {
 			message.channel.sendMessage("yo whaddup my brotato");
+			// if RNG complies, we deactivate broMode and reset broCount
 			broCount = 0;
 			broMode = 0;
 		}	
@@ -128,7 +128,7 @@ client.on('message', message=> {
 		{
 			message.channel.sendMessage("Don't do it, don't play it.");
 			setTimeout(() => { 
-			message.channel.send('Please.');
+				message.channel.send('Please.');
 			}, 6000);
 		}
 		
@@ -161,8 +161,6 @@ client.on('message', message=> {
 		{
 			message.channel.sendMessage("Sparrow should be good");
 		}
-		
-		
 	}
 });
 
@@ -361,14 +359,6 @@ client.on('message', message => {
 	}
 return;
 });
-
-/* client.on('message', message => {
-	if (message.author.id == 290486859480563713 && message.content === catPath + "dog1.jpg")
-		{
-			message.channel.sendMessage("MIIIIIIIIIA");
-		}
-	return;
-}); */
 
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 client.on('message', message => {
@@ -622,38 +612,42 @@ client.on('message', message => {
 			return;
 		}
 	}
-	//this cat code is DM specific, as the wrong channel feature would cause a crash
-	if (message.content.match(/cat/i) && message.channel.type == "dm") {
-		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+	// this cat code is DM specific, as the wrong channel feature would cause a crash
+	if (message.content.match(/cat/i) && message.channel.type == "dm")
+	{
+		catNum = (Math.floor(Math.random() * 56)+1); // this is the number of possibilities starting from zero, so 5 is 01234
 		message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
 		return;
 	}
 	
 	if (message.content.match(/kitchen nightmares/i) || message.content.match(/lamb sauce/i) || message.content.match(/gordon/i) || message.content.match(/ramsay/i))
-    	{
-        message.channel.sendMessage("Funny you say that https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
+    {
+		message.channel.sendMessage("Funny you say that https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
 		return;
-    	}
+    }
 	
-	if (message.content.match(/send help/i)) {
+	if (message.content.match(/send help/i))
+	{
     	message.channel.send("Help.");
 		//Haha get it she sends "Help."
 		//I don't even know if that was the joke Sprow was making, she's so confusing. ;-;
 	}
 	
-	if (message.content.match(/window frames/i)) {
+	if (message.content.match(/window frames/i))
+	{
         message.channel.sendMessage("WHAT TF");
 		message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/WHATTF.png");
 		return;
     }
 	
 	if (message.content.match(/lol/i) || message.content.match(/lmfao/i) || message.content.match(/lmao/i) || message.content.match(/rofl/i))
-    	{
+    {
         message.channel.sendMessage("Lmao");
 		return;
-    	}
+    }
 
-	if (message.content.match(/mute sparrow bot/i)) {
+	if (message.content.match(/mute sparrow bot/i))
+	{
 		threeEyedSprow = (Math.floor(Math.random() * 50) + 1);
 		if (threeEyedSprow == 1) {
 			message.channel.sendMessage(";-;;");
@@ -663,7 +657,8 @@ client.on('message', message => {
 		return;
 	}
 	
-	if ((message.content.match(/1 in 4000/i)) || ((message.content.match(/tmsm/i) && message.content.match(/crash/i))) ) {
+	if ((message.content.match(/1 in 4000/i)) || ((message.content.match(/tmsm/i) && message.content.match(/crash/i))) )
+	{
 		message.channel.sendMessage("OH GOD\nit was my own fault Liquid's game kept crashing.\nI didn't convert it right.\nIt crashes the game.\nI blamed Radical for something that is my fault\nI fucked up Liquid's stream");
 	}
 	
