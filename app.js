@@ -81,7 +81,7 @@ client.on('message', message => {
 });
 
 client.on('message', message=> {
-	if (message.isMentioned(client.user)) 
+	if (message.isMentioned(client.user)) {
 		if (message.content.match(/DM Colou/i)) {
 			message.channel.sendMessage('Okay then.');
 			client.users.get("333710766706524167").sendMessage("Hi Colou")
