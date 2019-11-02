@@ -93,8 +93,6 @@ client.on('message', message=> {
 			client.users.get("90852908509175808").sendMessage("I think he enjoys annoying you.");
 			client.users.get("90852908509175808").sendMessage("He's weird.");
 		}
-		
-		else if (
 	}
 });
 
