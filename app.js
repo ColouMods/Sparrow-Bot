@@ -3,6 +3,7 @@ const client = new Discord.Client();
 var diebot = 1;
 var broMode = 0;
 var broCount;
+var catPath = "https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/";
 greet = ["Oh hi", "Hi", "Sup"];
 sendChannels = ["447499927220781068", "449616538358513698"];
 lolrej = '"lol rejected"';
@@ -245,20 +246,24 @@ client.on('message', message => {
 //HOMER END
 
 client.on('message', message => {
-    	if (message.content.match(/execute order 66/i))
+    if (message.content.match(/execute order 66/i))
 	{
         message.channel.sendMessage('Understood.');
-	client.users.get("259458435484090369").sendMessage("Hi me, I'm you. Wanna be friends?");
+		client.users.get("259458435484090369").sendMessage("Hi me, I'm you. Wanna be friends?");
 	}
 	if (message.content.match(/execute order 67/i))
 	{
         message.channel.sendMessage('You just ruined the reference, but okay.');
-	client.users.get("259458435484090369").sendMessage("So, how was your day?");
+		client.users.get("259458435484090369").sendMessage("So, how was your day?");
 	}
 	if (message.content.match(/@Sparrow Chris is broken/i))
-	client.channels.get('424212795970551808').sendMessage('Uh oh, I broke him.')
+	{
+		client.channels.get('424212795970551808').sendMessage('Uh oh, I broke him.')
+	}
 	if (message.content.match(/@Sparrow Cloou is broken/i))
-	client.channels.get('424212795970551808').sendMessage('Whoops, posted twice.')
+	{
+		client.channels.get('424212795970551808').sendMessage('Whoops, posted twice.')
+	}
 });
 
 
@@ -537,31 +542,31 @@ client.on('message', message => {
 	//for servers only, DMs will not have the wrong channel feature
 	if (message.content.match(/cat/i) && message.channel.type != "dm") {
     	wrongNum = (Math.floor(Math.random() * 50)+1);
-	rightChannel = message.guild.id;
-	if (wrongNum != 1)
-	{
-		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-		message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
-		return;
-	}
-	else if (wrongNum == 1)
-	{
-		wrongChannel = (Math.floor(Math.random() * sendChannels.length));
-		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-		msgChannel = sendChannels[wrongChannel];
-		client.channels.get(msgChannel).sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
-       		if (client.channels.get(msgChannel).guild.id != rightChannel) {	
-			setTimeout(() => { 
-       			client.channels.get(msgChannel).send("Whoops, wrong server.");
-    		}, 3390);
+		rightChannel = message.guild.id;
+		if (wrongNum != 1)
+		{
+			catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+			message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
+			return;
 		}
-		return;
-	}
+		else if (wrongNum == 1)
+		{
+			wrongChannel = (Math.floor(Math.random() * sendChannels.length));
+			catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+			msgChannel = sendChannels[wrongChannel];
+			client.channels.get(msgChannel).sendMessage(catPath + "cat" + catNum + ".jpg");
+				if (client.channels.get(msgChannel).guild.id != rightChannel) {	
+				setTimeout(() => { 
+					client.channels.get(msgChannel).send("Whoops, wrong server.");
+				}, 3390);
+			}
+			return;
+		}
 	}
 	//this cat code is DM specific, as the wrong channel feature would cause a crash
 	if (message.content.match(/cat/i) && message.channel.type == "dm") {
 		catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-		message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat"+catNum+".jpg");
+		message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
 		return;
 	}
 	
