@@ -147,10 +147,22 @@ client.on('message', message=> {
 			message.channel.sendMessage("Oh god I gotta work on that");	
 		}
 		
+		if (message.content.match(/Chris is broken/i))
+		{
+			client.channels.get('424212795970551808').sendMessage('Uh oh, I broke him.')
+		}
+		
+		if (message.content.match(/Cloou is broken/i))
+		{
+			client.channels.get('424212795970551808').sendMessage('Whoops, posted twice.')
+		}
+		
 		else
 		{
 			message.channel.sendMessage("Sparrow should be good");
 		}
+		
+		
 	}
 });
 
@@ -313,14 +325,6 @@ client.on('message', message => {
         message.channel.sendMessage('You just ruined the reference, but okay.');
 		client.users.get("259458435484090369").sendMessage("So, how was your day?");
 	}
-	if (message.content.match(/@Sparrow Chris is broken/i))
-	{
-		client.channels.get('424212795970551808').sendMessage('Uh oh, I broke him.')
-	}
-	if (message.content.match(/@Sparrow Cloou is broken/i))
-	{
-		client.channels.get('424212795970551808').sendMessage('Whoops, posted twice.')
-	}
 });
 
 
@@ -479,9 +483,7 @@ client.on('message', message => {
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat37.jpg')
 	{
 		same = ["same", "Same"];
-		{
 		message.channel.sendMessage(same[Math.floor(Math.random() * 2)]);
-		}
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat38.jpg')
