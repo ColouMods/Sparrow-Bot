@@ -94,6 +94,63 @@ client.on('message', message=> {
 			client.users.get("90852908509175808").sendMessage("I think he enjoys annoying you.");
 			client.users.get("90852908509175808").sendMessage("He's weird.");
 		}
+
+		else if (message.content.match(/view github/i))
+		{
+			message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm half-digested Sparrow.");
+        }
+		
+		else if
+		(
+			(message.content.match(/make cloou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
+			(message.content.match(/convert cloou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
+			(message.content.match(/make colou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
+			(message.content.match(/convert colou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i))
+		)
+		{
+			message.channel.sendMessage("boolprop cloou false");
+    	}
+		
+		else if (message.content.match(/war is good for absolutely nothing/i))
+		{
+			message.channel.sendMessage("Haha");
+			message.channel.sendMessage("Right, I'm afraid I'm odd");
+			message.channel.sendMessage("No");
+			message.channel.sendMessage("Off to bed*");
+        }
+		
+		else if (message.content.match(/hi/i) || message.content.match(/hello/i) || message.content.match(/hey/i))
+		{
+			message.channel.sendMessage(greet[Math.floor(Math.random() * greet.length)]);
+		}
+		
+		else if (message.content.match(/what is the current acis release/i))
+		{
+			message.channel.sendMessage("Don't do it, don't play it.");
+			setTimeout(() => { 
+			message.channel.send('Please.');
+			}, 6000);
+		}
+		
+		else if (message.content.match(/a garden sounds fun/i))
+		{
+			message.channel.sendMessage("Brain poop, whoops.");
+		}
+		
+		else if (message.content.match(/would you mind calming the fuck down/i))
+		{
+			message.channel.sendMessage(";-;");	
+		}
+		
+		else if (message.content.match(/springfield nightmares/i))
+		{
+			message.channel.sendMessage("Oh god I gotta work on that");	
+		}
+		
+		else
+		{
+			message.channel.sendMessage("Sparrow should be good");
+		}
 	}
 });
 
@@ -607,58 +664,7 @@ client.on('message', message => {
 	if ((message.content.match(/1 in 4000/i)) || ((message.content.match(/tmsm/i) && message.content.match(/crash/i))) ) {
 		message.channel.sendMessage("OH GOD\nit was my own fault Liquid's game kept crashing.\nI didn't convert it right.\nIt crashes the game.\nI blamed Radical for something that is my fault\nI fucked up Liquid's stream");
 	}
-		//This is her mention code
-	if (message.content.match(/@sparrow/i))
-		if (message.content.match(/view github/i))
-		{
-			message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm half-digested Sparrow.");
-        }
-		
-		else if
-		(
-			(message.content.match(/make cloou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
-			(message.content.match(/convert cloou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
-			(message.content.match(/make colou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
-			(message.content.match(/convert colou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i))
-		)
-		{
-			message.channel.sendMessage("boolprop cloou false");
-    	}
-		
-		else if (message.content.match(/war is good for absolutely nothing/i))
-		{
-			message.channel.sendMessage("Haha");
-			message.channel.sendMessage("Right, I'm afraid I'm odd");
-			message.channel.sendMessage("No");
-			message.channel.sendMessage("Off to bed*");
-        }
-		else if (message.content.match(/hi/i) || message.content.match(/hello/i) || message.content.match(/hey/i))
-		{
-			message.channel.sendMessage(greet[Math.floor(Math.random() * greet.length)]);
-		}
-		else if (message.content.match(/what is the current acis release/i))
-		{
-			message.channel.sendMessage("Don't do it, don't play it.");
-			setTimeout(() => { 
-			message.channel.send('Please.');
-			}, 6000);
-		}
-		else if (message.content.match(/a garden sounds fun/i))
-		{
-			message.channel.sendMessage("Brain poop, whoops.");
-		}
-		else if (message.content.match(/would you mind calming the fuck down/i))
-		{
-			message.channel.sendMessage(";-;");	
-		}
-		else if (message.content.match(/springfield nightmares/i))
-		{
-			message.channel.sendMessage("Oh god I gotta work on that");	
-		}
-		else
-		{
-			message.channel.sendMessage("Sparrow should be good");
-		}
+	
 	return;
 });
 
