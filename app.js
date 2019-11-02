@@ -32,6 +32,17 @@ client.on('ready', () => {
 //	}
 //});
 
+	/*
+	I don't know why this was in the DM Cloou section but I'm scared to fully delete it.
+	async run(message) {
+	let client = message.channel.client;
+	let user = client.fetchUser('<333710766706524167>')
+	.then(user => {
+        user.sendMessage('Test message'); 
+
+    	});
+	}*/
+
 client.on("guildCreate", guild => {
     guild.channels.find("name", "shar-general").sendMessage("I don't know if this is the place to introduce youself, but hi!");
 });
@@ -64,55 +75,43 @@ client.on('message', message => {
 client.on('message', message => {
 	if (message.content.match(/bot/i) && message.content.match(/cancer/i))
 	{
-	message.channel.sendMessage("Nah mate");
-	message.channel.sendMessage("You're cancer");
+		message.channel.sendMessage("Nah mate");
+		message.channel.sendMessage("You're cancer");
 	}
 });
 
-client.on('message', message => {
-    	if (message.content.match(/@Sparrow DM Colou/i))
-	{
-        message.channel.sendMessage('Okay then.');
-	client.users.get("333710766706524167").sendMessage("Hi Colou");
-	
-	/*
-	async run(message) {
-	let client = message.channel.client;
-	let user = client.fetchUser('<333710766706524167>')
-	.then(user => {
-        user.sendMessage('Test message'); 
-
-    	});
-	}*/
-	}
-});
-
-client.on('message', message => {
-	if (message.author.id == 333710766706524167)
-	{
-    		if (message.content.match(/@Sparrow Annoy Chris/i))
-		{
-        	message.channel.sendMessage('Absolutely.');
-		client.users.get("90852908509175808").sendMessage("Hey, Colou asked me to annoy you.");
-		client.users.get("90852908509175808").sendMessage("I think he enjoys annoying you.");
-		client.users.get("90852908509175808").sendMessage("He's weird.");
+client.on('message', message=> {
+	if (message.isMentioned(client.user)) 
+		if (message.content.match(/DM Colou/i)) {
+			message.channel.sendMessage('Okay then.');
+			client.users.get("333710766706524167").sendMessage("Hi Colou")
 		}
+		
+		else if (message.content.match(/Annoy Chris/i) && message.author.id == 333710766706524167) {
+			message.channel.sendMessage('Absolutely.');
+			client.users.get("90852908509175808").sendMessage("Hey, Colou asked me to annoy you.");
+			client.users.get("90852908509175808").sendMessage("I think he enjoys annoying you.");
+			client.users.get("90852908509175808").sendMessage("He's weird.");
+		}
+		
+		else if (
 	}
 });
+
 //memes and shit
 client.on('message', message => {
 	if ((message.channel.id == 449617271258742784) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('424212795970551808').sendMessage(shitToSend);
+    	client.channels.get('424212795970551808').sendMessage(shitToSend);
 	}
 });
-//secret
+//secret 
 client.on('message', message => {
 	if ((message.channel.id == 452827828103151616) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('447499927220781068').sendMessage(shitToSend);
+    	client.channels.get('447499927220781068').sendMessage(shitToSend);
 	}
 });
 //hwwotw general
@@ -120,7 +119,7 @@ client.on('message', message => {
 	if ((message.channel.id == 452839469779779596) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('422215368782643202').sendMessage(shitToSend);
+    	client.channels.get('422215368782643202').sendMessage(shitToSend);
 	}
 });
 
@@ -129,7 +128,7 @@ client.on('message', message => {
 	if ((message.channel.id == 455383264547569676) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('454685400699502594').sendMessage(shitToSend);
+    	client.channels.get('454685400699502594').sendMessage(shitToSend);
 	}
 });
 
@@ -139,7 +138,7 @@ client.on('message', message => {
 	if ((message.channel.id == 449683861664956426) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.users.get("90852908509175808").sendMessage(shitToSend);
+    	client.users.get("90852908509175808").sendMessage(shitToSend);
 	}
 });
 
@@ -147,7 +146,7 @@ client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 90852908509175808))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('449683861664956426').sendMessage("Chris just said ```" + shitToSend + "```");
+    	client.channels.get('449683861664956426').sendMessage("Chris just said ```" + shitToSend + "```");
 	}
 });
 //CHRIS END
@@ -158,7 +157,7 @@ client.on('message', message => {
 	if ((message.channel.id == 449699947080712211) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.users.get("230847867458158593").sendMessage(shitToSend);
+    	client.users.get("230847867458158593").sendMessage(shitToSend);
 	}
 });
 
@@ -166,7 +165,7 @@ client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 230847867458158593))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('449699947080712211').sendMessage("Nightbane just said ```" + shitToSend + "```");
+    	client.channels.get('449699947080712211').sendMessage("Nightbane just said ```" + shitToSend + "```");
 	}
 });
 //NIGHT END
@@ -177,7 +176,7 @@ client.on('message', message => {
 	if ((message.channel.id == 449705781298987008) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.users.get("188248640635011072").sendMessage(shitToSend);
+    	client.users.get("188248640635011072").sendMessage(shitToSend);
 	}
 });
 
@@ -185,7 +184,7 @@ client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 188248640635011072))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('449705781298987008').sendMessage("Will just said ```" + shitToSend + "```");
+    	client.channels.get('449705781298987008').sendMessage("Will just said ```" + shitToSend + "```");
 	}
 });
 //WILL END
@@ -196,7 +195,7 @@ client.on('message', message => {
 	if ((message.channel.id == 450033076114948107) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.users.get("259458435484090369").sendMessage(shitToSend);
+    	client.users.get("259458435484090369").sendMessage(shitToSend);
 	}
 });
 
@@ -204,7 +203,7 @@ client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 259458435484090369))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('450033076114948107').sendMessage("Sparrow just said ```" + shitToSend + "```");
+    	client.channels.get('450033076114948107').sendMessage("Sparrow just said ```" + shitToSend + "```");
 	}
 });
 //SPROW END
@@ -215,7 +214,7 @@ client.on('message', message => {
 	if ((message.channel.id == 450035060863926272) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.users.get("333710766706524167").sendMessage(shitToSend);
+    	client.users.get("333710766706524167").sendMessage(shitToSend);
 	}
 });
 
@@ -223,7 +222,7 @@ client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 333710766706524167))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('450035060863926272').sendMessage("Colou just said ```" + shitToSend + "```");
+    	client.channels.get('450035060863926272').sendMessage("Colou just said ```" + shitToSend + "```");
 	}
 });
 //CLOOU END
@@ -234,7 +233,7 @@ client.on('message', message => {
 	if ((message.channel.id == 450037451994693651) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    		client.users.get("290486859480563713").sendMessage(shitToSend);
+    	client.users.get("290486859480563713").sendMessage(shitToSend);
 	}
 });
 
@@ -242,7 +241,7 @@ client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 290486859480563713))
 	{
 		var shitToSend = message.content;
-    		client.channels.get('450037451994693651').sendMessage("Homer just said ```" + shitToSend + "```");
+    	client.channels.get('450037451994693651').sendMessage("Homer just said ```" + shitToSend + "```");
 	}
 });
 //HOMER END
@@ -287,16 +286,15 @@ return;
 client.on('message', message => {
 	if (message.author.id == 90852908509175808) {
 		if ((message.content.match(/<@424679471077916682>/i) && message.content.match(/die/i)) || (message.content.match(/bot/i) && message.content.match(/die/i))) {
-				if (diebot == 20)
-    				{
-       				message.channel.sendMessage("Don't you think you've said that enough, Chris?");
-					diebot = 1;
-					return;
-    			}
-				message.channel.sendMessage("No, Chris. Lmao.");
-				diebot++;
-			}
-}
+			if (diebot == 20) {
+       			message.channel.sendMessage("Don't you think you've said that enough, Chris?");
+				diebot = 1;
+				return;
+    		}
+			message.channel.sendMessage("No, Chris. Lmao.");
+			diebot++;
+		}
+	}
 return;
 });
 
@@ -331,8 +329,6 @@ client.on('message', message => {
 	{
 		message.channel.sendMessage("Same");
 	}
-	
-	
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat15.jpg')
 	{
@@ -388,23 +384,23 @@ client.on('message', message => {
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
 	{
-        	message.channel.sendMessage("AwW");
+        message.channel.sendMessage("AwW");
 		message.channel.sendMessage("PURRITO");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat32.jpg')
 	{
-        	message.channel.sendMessage("My poppy is growing well *ba dum tiss*");
+        message.channel.sendMessage("My poppy is growing well *ba dum tiss*");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat34.jpg')
 	{
-        	message.channel.sendMessage("Me when I'm woken up");
+        message.channel.sendMessage("Me when I'm woken up");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat35.jpg')
 	{
-        	message.channel.sendMessage("Oooh I remember that box, she was obsessive with that but we had to send it back to amazon");
+        message.channel.sendMessage("Oooh I remember that box, she was obsessive with that but we had to send it back to amazon");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat36.jpg')
@@ -454,44 +450,44 @@ client.on('message', message => {
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat47.jpg')
 	{
-        	message.channel.sendMessage("STRETCHY CONE");
+        message.channel.sendMessage("STRETCHY CONE");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat48.jpg')
 	{
-        	message.channel.sendMessage("Bag cat");
+        message.channel.sendMessage("Bag cat");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat49.jpg')
 	{
-        	message.channel.sendMessage("aww");
+        message.channel.sendMessage("aww");
 		message.channel.sendMessage("JACK IN DA ~~HOOD~~ VETS");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat51.jpg')
 	{
-        	message.channel.sendMessage("AWW CONE BABy");
+        message.channel.sendMessage("AWW CONE BABy");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat52.jpg')
 	{
-        	message.channel.sendMessage("Awww poor thing :frowning:");
+        message.channel.sendMessage("Awww poor thing :frowning:");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat53.jpg')
 	{
-        	message.channel.sendMessage("SO CUTE");
+        message.channel.sendMessage("SO CUTE");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat54.jpg')
 	{
-        	message.channel.sendMessage("STP");
+        message.channel.sendMessage("STP");
 		message.channel.sendMessage("PLEASe");
 	}
 	
 	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat55.jpg')
 	{
-        	message.channel.sendMessage("HAHAH");
+        message.channel.sendMessage("HAHAH");
 		message.channel.sendMessage("Same");
 	}
 	
@@ -515,10 +511,6 @@ client.on('message', message => {
     	{
         message.channel.sendMessage("Lmao");
     	}
-	//}
-	
-	//if (message.content.match(/ /i))
-	//{
 	cuntNum = (Math.floor(Math.random() * 100)+1);
 	if (cuntNum == 1)
     	{
@@ -555,7 +547,7 @@ client.on('message', message => {
        		if (client.channels.get(msgChannel).guild.id != rightChannel) {	
 			setTimeout(() => { 
        			client.channels.get(msgChannel).send("Whoops, wrong server.");
-    			}, 3390);
+    		}, 3390);
 		}
 		return;
 	}
@@ -567,34 +559,25 @@ client.on('message', message => {
 		return;
 	}
 	
-	if (message.content.match(/kitchen nightmares/i) ||
-	    message.content.match(/lamb sauce/i) ||
-	    message.content.match(/gordon/i) ||
-	    message.content.match(/ramsay/i)
-        )
+	if (message.content.match(/kitchen nightmares/i) || message.content.match(/lamb sauce/i) || message.content.match(/gordon/i) || message.content.match(/ramsay/i))
     	{
         message.channel.sendMessage("Funny you say that https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
 		return;
     	}
 	
 	if (message.content.match(/send help/i)) {
-    		message.channel.send("Help.");
+    	message.channel.send("Help.");
 		//Haha get it she sends "Help."
 		//I don't even know if that was the joke Sprow was making, she's so confusing. ;-;
 	}
 	
-	if (message.content.match(/window frames/i))
-    	{
+	if (message.content.match(/window frames/i)) {
         message.channel.sendMessage("WHAT TF");
-	message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/WHATTF.png");
+		message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/WHATTF.png");
 		return;
-    	}
+    }
 	
-	if (message.content.match(/lol/i) ||
-	    message.content.match(/lmfao/i) ||
-	    message.content.match(/lmao/i) ||
-	    message.content.match(/rofl/i)
-        )
+	if (message.content.match(/lol/i) || message.content.match(/lmfao/i) || message.content.match(/lmao/i) || message.content.match(/rofl/i))
     	{
         message.channel.sendMessage("Lmao");
 		return;
@@ -616,51 +599,55 @@ client.on('message', message => {
 		//This is her mention code
 	if (message.content.match(/@sparrow/i))
 		if (message.content.match(/view github/i))
-	{
-        message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm half-digested Sparrow.");
+		{
+			message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm half-digested Sparrow.");
         }
-		else if (
+		
+		else if
+		(
 			(message.content.match(/make cloou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
 			(message.content.match(/convert cloou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
 			(message.content.match(/make colou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i)) ||
 			(message.content.match(/convert colou/i) && message.content.match(/to/i) && message.content.match(/a boolean/i))
-			)
-	{
-        message.channel.sendMessage("boolprop cloou false");
+		)
+		{
+			message.channel.sendMessage("boolprop cloou false");
     	}
+		
 		else if (message.content.match(/war is good for absolutely nothing/i))
-	{
-	message.channel.sendMessage("Haha");
-	message.channel.sendMessage("Right, I'm afraid I'm odd");
-	message.channel.sendMessage("No");
-	message.channel.sendMessage("Off to bed*");
+		{
+			message.channel.sendMessage("Haha");
+			message.channel.sendMessage("Right, I'm afraid I'm odd");
+			message.channel.sendMessage("No");
+			message.channel.sendMessage("Off to bed*");
         }
 		else if (message.content.match(/hi/i) || message.content.match(/hello/i) || message.content.match(/hey/i))
-	{
-  	message.channel.sendMessage(greet[Math.floor(Math.random() * greet.length)]);
-  	}
-		else if (message.content.match(/what is the current acis release/i)) {
-	message.channel.sendMessage("Don't do it, don't play it.");
-	setTimeout(() => { 
-		message.channel.send('Please.');
-	}, 6000);
-	}
-	else if (message.content.match(/a garden sounds fun/i))
-	{
-	message.channel.sendMessage("Brain poop, whoops.");
-	}
+		{
+			message.channel.sendMessage(greet[Math.floor(Math.random() * greet.length)]);
+		}
+		else if (message.content.match(/what is the current acis release/i))
+		{
+			message.channel.sendMessage("Don't do it, don't play it.");
+			setTimeout(() => { 
+			message.channel.send('Please.');
+			}, 6000);
+		}
+		else if (message.content.match(/a garden sounds fun/i))
+		{
+			message.channel.sendMessage("Brain poop, whoops.");
+		}
 		else if (message.content.match(/would you mind calming the fuck down/i))
-	{
-	message.channel.sendMessage(";-;");	
-	}
+		{
+			message.channel.sendMessage(";-;");	
+		}
 		else if (message.content.match(/springfield nightmares/i))
-	{
-	message.channel.sendMessage("Oh god I gotta work on that");	
-	}
+		{
+			message.channel.sendMessage("Oh god I gotta work on that");	
+		}
 		else
-	{
-	message.channel.sendMessage("Sparrow should be good");
-	}
+		{
+			message.channel.sendMessage("Sparrow should be good");
+		}
 	return;
 });
 
