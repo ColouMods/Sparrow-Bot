@@ -296,13 +296,13 @@ client.on('message', message => {
 return;
 });
 
-client.on('message', message => {
+/* client.on('message', message => {
 	if (message.author.id == 290486859480563713 && message.content === catPath + "dog1.jpg")
 		{
 			message.channel.sendMessage("MIIIIIIIIIA");
 		}
 	return;
-});
+}); */
 
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 client.on('message', message => {
