@@ -587,6 +587,11 @@ client.on('message', message => {
     	{
         message.channel.sendMessage("I had one last night. I failed my A-Levels with DEP. No idea what the P grade was but it must have been bad because I cried pretty bad over it. UCAS track had Coventry marked as " + lolrej + " and I had to start retakes that day. It was the most disappointing thing because I didn't have Adrian, I had Kelly. Those of you who talked to me last year will know who she is. (Those who don't, media teacher from first year). She was her usual annoying, scary self and I ended up crying when she walked into the room. The dream ended with her finding my old revision as she was throwing it out and saw it said " + bitch);
 	}
+	pizzaNum = (Math.floor(Math.random() * 100)+1);
+	if (pizzaNum == 1) 
+    	{
+        message.channel.sendMessage("My sister (taco smasher) got into a habit of making pizza except her dough was shit but my parents kept praising it like it was god-tier and I must admit, I didn't like going back to my parents because she'd force this shit pizza at me and omg she didn't even use yeast or anything");
+	}
 	
 	//for servers only, DMs will not have the wrong channel feature
 	if (message.content.match(/cat/i) && message.channel.type != "dm") {
