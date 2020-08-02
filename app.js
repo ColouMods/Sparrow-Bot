@@ -26,6 +26,13 @@ client.on('ready', () => {
 	.catch(console.error);*/
 });
 
+client.on('message', message => {
+	if (message.author.id == 290486859480563713 && message.content == "https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat13.jpg")
+	{
+		const catID = message.content.slice(catPath.length + 3).trim().split(/ +/g);
+		message.channel.sendMessage(catID);
+	}
+});
 //client.on('message', message => {
 //	if (message.author.id == 90852908509175808)
 //	{
