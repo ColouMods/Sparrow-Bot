@@ -370,154 +370,119 @@ client.on('message', message => {
 			case 1:
 				message.channel.sendMessage("MIIIA");
 				break;
-
 			case 5:
 				message.channel.sendMessage("MIIIA");
 				break;
-
 			case 8:
 				message.channel.sendMessage("same");
 				break;
-
 			case 11:
 				message.channel.sendMessage("Scratchy");
 				break;
-
 			case 13:
 				message.channel.sendMessage("She was only 1 in this pic, she's 3 now <:tjo:425348087461183488>");
 				message.channel.sendMessage("Aww");
 				break;
-
 			case 14:
 				message.channel.sendMessage("Same");
 				break;
-
 			case 15:
 				message.channel.sendMessage("Curly mia");
 				break;
-
 			case 17:
 				message.channel.sendMessage("He's sinking too low");
 				message.channel.sendMessage("HA");
 				break;
-
 			case 21:
 				message.channel.sendMessage("EYES");
 				break;
-
 			case 23:
 				message.channel.sendMessage("*BECOME THE PRESENT*");
 				break;
-
 			case 22:
 				message.channel.sendMessage("Why are most of these Mia?");
 				break;
-
 			case 24:
 				message.channel.sendMessage("EYES ARE SO CUTE THO");
 				message.channel.sendMessage("YEAH");
 				break;
-
 			case 25:
 				message.channel.sendMessage("Too cute tbh");
 				break;
-
 			case 26:
 				message.channel.sendMessage("Awwwwwwwww");
 				break;
-
 			case 28:
 				message.channel.sendMessage("When you realise you're a cat");
 				break;
-
 			case 30:
 				message.channel.sendMessage("Same");
 				break;
-
 			case 31:
 				message.channel.sendMessage("AwW");
 				message.channel.sendMessage("PURRITO");
 				break;
-
 			case 32:
 				message.channel.sendMessage("My poppy is growing well *ba dum tiss*");
 				break;
-
 			case 34:
 				message.channel.sendMessage("Me when I'm woken up");
 				break;
-
 			case 35:
 				message.channel.sendMessage("Oooh I remember that box, she was obsessive with that but we had to send it back to amazon");
 				break;
-
 			case 36:
 				message.channel.sendMessage("RAWR");
 				break;
-
 			case 37:
 				same = ["same", "Same"];
 				message.channel.sendMessage(same[Math.floor(Math.random() * 2)]);
 				break;
-
 			case 38:
 				message.channel.sendMessage("haha");
 				break;
-
 			case 39:
 				message.channel.sendMessage("Lap cat");
 				break;
-
 			case 40:
 				message.channel.sendMessage("tongue");
 				break;
-
 			case 42:
 				message.channel.sendMessage("NSFW");
 				break;
-
 			case 44:
 				message.channel.sendMessage("It's like a fucking western.");
 				message.channel.sendMessage("Like Dash staring and Mia and Mia staring at Dash like wtf you in my house for");
 				break;
-
 			case 45:
 				message.channel.sendMessage("Aww");
 				message.channel.sendMessage("Baby bed");
 				break;
-
 			case 47:
-			message.channel.sendMessage("STRETCHY CONE");
+				message.channel.sendMessage("STRETCHY CONE");
 				break;
-
 			case 48:
-			message.channel.sendMessage("Bag cat");
+				message.channel.sendMessage("Bag cat");
 				break;
-
 			case 49:
-			message.channel.sendMessage("aww");
+				message.channel.sendMessage("aww");
 				message.channel.sendMessage("JACK IN DA ~~HOOD~~ VETS");
 				break;
-
 			case 51:
-			message.channel.sendMessage("AWW CONE BABy");
+				message.channel.sendMessage("AWW CONE BABy");
 				break;
-
 			case 52:
-			message.channel.sendMessage("Awww poor thing :frowning:");
+				message.channel.sendMessage("Awww poor thing :frowning:");
 				break;
-
 			case 53:
-			message.channel.sendMessage("SO CUTE");
+				message.channel.sendMessage("SO CUTE");
 				break;
-
 			case 54:
-			message.channel.sendMessage("STP");
+				message.channel.sendMessage("STP");
 				message.channel.sendMessage("PLEASe");
 				break;
-
 			case 55:
-			message.channel.sendMessage("HAHAH");
+				message.channel.sendMessage("HAHAH");
 				message.channel.sendMessage("Same");
 				break;
 			default:
