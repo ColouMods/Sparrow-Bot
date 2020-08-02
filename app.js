@@ -30,7 +30,7 @@ client.on('message', message => {
 	if (message.author.id == 290486859480563713 && message.content == "https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat13.jpg")
 	{
 		var catID = message.content.slice(catPath.length + 3).trim().split(/ +/g);
-		//catID = catID.slice(0, -4);
+		catID = catID.slice(0, -4);
 		message.channel.sendMessage(catID);
 	}
 });
