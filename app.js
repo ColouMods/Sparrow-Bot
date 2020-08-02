@@ -29,7 +29,7 @@ client.on('ready', () => {
 client.on('message', message => {
 	if (message.author.id == 290486859480563713 && message.content == "https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat13.jpg")
 	{
-		var catID = message.content.slice(catPath.length + 3).trim().split(/ +/g);
+		var catID = message.content.slice(catPath.length + 3);
 		catID = catID.slice(0, -4);
 		message.channel.sendMessage(catID);
 	}
@@ -370,195 +370,166 @@ return;
 
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 client.on('message', message => {
-	if (message.author.id == 424679471077916682) {
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat1.jpg' ||
-		message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat5.jpg'
-		)
-	{
-		message.channel.sendMessage("MIIIA");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat8.jpg')
-	{
-		message.channel.sendMessage("same");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat11.jpg')
-	{
-		message.channel.sendMessage("Scratchy");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat13.jpg')
-	{
-		message.channel.sendMessage("She was only 1 in this pic, she's 3 now <:tjo:425348087461183488>");
-		message.channel.sendMessage("Aww");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat14.jpg')
-	{
-		message.channel.sendMessage("Same");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat15.jpg')
-	{
-		message.channel.sendMessage("Curly mia");
-	}
+	if (message.author.id == 424679471077916682 && message.content.match(/https:\/\/raw.githubusercontent.com\/ColouMods\/Sparrow-Bot\/master\/images\/cat/i)) {
+		catID = message.content.slice(catPath.length + 3);
+    		catID = catID.slice(0, -4);
+		switch(parseInt(catID, 10)) {
+			case 1:
+				message.channel.sendMessage("MIIIA");
+				break;
 
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat17.jpg')
-	{
-		message.channel.sendMessage("He's sinking too low");
-		message.channel.sendMessage("HA");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat21.jpg')
-	{
-		message.channel.sendMessage("EYES");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat23.jpg')
-	{
-		message.channel.sendMessage("*BECOME THE PRESENT*");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat22.jpg')
-	{
-		message.channel.sendMessage("Why are most of these Mia?");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat24.jpg')
-	{
-		message.channel.sendMessage("EYES ARE SO CUTE THO");
-		message.channel.sendMessage("YEAH");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat25.jpg')
-	{
-		message.channel.sendMessage("Too cute tbh");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat26.jpg')
-	{
-		message.channel.sendMessage("Awwwwwwwww");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat28.jpg')
-	{
-		message.channel.sendMessage("When you realise you're a cat");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat30.jpg')
-	{
-		message.channel.sendMessage("Same");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat31.jpg')
-	{
-        message.channel.sendMessage("AwW");
-		message.channel.sendMessage("PURRITO");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat32.jpg')
-	{
-        message.channel.sendMessage("My poppy is growing well *ba dum tiss*");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat34.jpg')
-	{
-        message.channel.sendMessage("Me when I'm woken up");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat35.jpg')
-	{
-        message.channel.sendMessage("Oooh I remember that box, she was obsessive with that but we had to send it back to amazon");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat36.jpg')
-	{
-		message.channel.sendMessage("RAWR");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat37.jpg')
-	{
-		same = ["same", "Same"];
-		message.channel.sendMessage(same[Math.floor(Math.random() * 2)]);
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat38.jpg')
-	{
-		message.channel.sendMessage("haha")
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat39.jpg')
-	{
-		message.channel.sendMessage("Lap cat")
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat40.jpg')
-	{
-		message.channel.sendMessage("tongue")
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat42.jpg')
-	{
-		message.channel.sendMessage("NSFW")
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat44.jpg')
-	{
-		message.channel.sendMessage("It's like a fucking western.");
-		message.channel.sendMessage("Like Dash staring and Mia and Mia staring at Dash like wtf you in my house for");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat45.jpg')
-	{
-		message.channel.sendMessage("Aww");
-		message.channel.sendMessage("Baby bed");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat47.jpg')
-	{
-        message.channel.sendMessage("STRETCHY CONE");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat48.jpg')
-	{
-        message.channel.sendMessage("Bag cat");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat49.jpg')
-	{
-        message.channel.sendMessage("aww");
-		message.channel.sendMessage("JACK IN DA ~~HOOD~~ VETS");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat51.jpg')
-	{
-        message.channel.sendMessage("AWW CONE BABy");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat52.jpg')
-	{
-        message.channel.sendMessage("Awww poor thing :frowning:");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat53.jpg')
-	{
-        message.channel.sendMessage("SO CUTE");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat54.jpg')
-	{
-        message.channel.sendMessage("STP");
-		message.channel.sendMessage("PLEASe");
-	}
-	
-	if (message.content === 'https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat55.jpg')
-	{
-        message.channel.sendMessage("HAHAH");
-		message.channel.sendMessage("Same");
-	}
-	
+			case 5:
+				message.channel.sendMessage("MIIIA");
+				break;
+
+			case 8:
+				message.channel.sendMessage("same");
+				break;
+
+			case 11:
+				message.channel.sendMessage("Scratchy");
+				break;
+
+			case 13:
+				message.channel.sendMessage("She was only 1 in this pic, she's 3 now <:tjo:425348087461183488>");
+				message.channel.sendMessage("Aww");
+				break;
+
+			case 14:
+				message.channel.sendMessage("Same");
+				break;
+
+			case 15:
+				message.channel.sendMessage("Curly mia");
+				break;
+
+			case 17:
+				message.channel.sendMessage("He's sinking too low");
+				message.channel.sendMessage("HA");
+				break;
+
+			case 21:
+				message.channel.sendMessage("EYES");
+				break;
+
+			case 23:
+				message.channel.sendMessage("*BECOME THE PRESENT*");
+				break;
+
+			case 22:
+				message.channel.sendMessage("Why are most of these Mia?");
+				break;
+
+			csae 24:
+				message.channel.sendMessage("EYES ARE SO CUTE THO");
+				message.channel.sendMessage("YEAH");
+				break;
+
+			case 25:
+				message.channel.sendMessage("Too cute tbh");
+				break;
+
+			case 26:
+				message.channel.sendMessage("Awwwwwwwww");
+				break;
+
+			case 28:
+				message.channel.sendMessage("When you realise you're a cat");
+				break;
+
+			case 30:
+				message.channel.sendMessage("Same");
+				break;
+
+			case 31:
+			message.channel.sendMessage("AwW");
+				message.channel.sendMessage("PURRITO");
+				break;
+
+			case 32:
+			message.channel.sendMessage("My poppy is growing well *ba dum tiss*");
+				break;
+
+			case 34:
+			message.channel.sendMessage("Me when I'm woken up");
+				break;
+
+			case 35:
+			message.channel.sendMessage("Oooh I remember that box, she was obsessive with that but we had to send it back to amazon");
+				break;
+
+			case 36:
+				message.channel.sendMessage("RAWR");
+				break;
+
+			case 37:
+				same = ["same", "Same"];
+				message.channel.sendMessage(same[Math.floor(Math.random() * 2)]);
+				break;
+
+			case 38:
+				message.channel.sendMessage("haha");
+				break;
+
+			case 39:
+				message.channel.sendMessage("Lap cat");
+				break;
+
+			case 40:
+				message.channel.sendMessage("tongue");
+				break;
+
+			case 42
+				message.channel.sendMessage("NSFW");
+				break;
+
+			case 44:
+				message.channel.sendMessage("It's like a fucking western.");
+				message.channel.sendMessage("Like Dash staring and Mia and Mia staring at Dash like wtf you in my house for");
+				break;
+
+			case 45:
+				message.channel.sendMessage("Aww");
+				message.channel.sendMessage("Baby bed");
+				break;
+
+			case 47:
+			message.channel.sendMessage("STRETCHY CONE");
+				break;
+
+			case 48:
+			message.channel.sendMessage("Bag cat");
+				break;
+
+			case 49:
+			message.channel.sendMessage("aww");
+				message.channel.sendMessage("JACK IN DA ~~HOOD~~ VETS");
+				break;
+
+			case 51:
+			message.channel.sendMessage("AWW CONE BABy");
+				break;
+
+			case 52:
+			message.channel.sendMessage("Awww poor thing :frowning:");
+				break;
+
+			case 53:
+			message.channel.sendMessage("SO CUTE");
+				break;
+
+			case 54:
+			message.channel.sendMessage("STP");
+				message.channel.sendMessage("PLEASe");
+				break;
+
+			case 55:
+			message.channel.sendMessage("HAHAH");
+				message.channel.sendMessage("Same");
+				break;
+			default:
+				break;
+		}
 	}	
 });
 //THIS IS MORE GENERAL STUFF.
