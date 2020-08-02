@@ -26,14 +26,6 @@ client.on('ready', () => {
 	.catch(console.error);*/
 });
 
-client.on('message', message => {
-	if (message.author.id == 290486859480563713 && message.content == "https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/cat13.jpg")
-	{
-		var catID = message.content.slice(catPath.length + 3);
-		catID = catID.slice(0, -4);
-		message.channel.sendMessage(catID);
-	}
-});
 //client.on('message', message => {
 //	if (message.author.id == 90852908509175808)
 //	{
@@ -371,7 +363,8 @@ return;
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
 client.on('message', message => {
 	if (message.author.id == 424679471077916682 && message.content.match(/https:\/\/raw.githubusercontent.com\/ColouMods\/Sparrow-Bot\/master\/images\/cat/i)) {
-		catID = message.content.slice(catPath.length + 3);
+		catID = message.content;
+		catID = catID.slice(catPath.length + 3);
     		catID = catID.slice(0, -4);
 		switch(parseInt(catID, 10)) {
 			case 1:
@@ -420,7 +413,7 @@ client.on('message', message => {
 				message.channel.sendMessage("Why are most of these Mia?");
 				break;
 
-			csae 24:
+			case 24:
 				message.channel.sendMessage("EYES ARE SO CUTE THO");
 				message.channel.sendMessage("YEAH");
 				break;
@@ -442,20 +435,20 @@ client.on('message', message => {
 				break;
 
 			case 31:
-			message.channel.sendMessage("AwW");
+				message.channel.sendMessage("AwW");
 				message.channel.sendMessage("PURRITO");
 				break;
 
 			case 32:
-			message.channel.sendMessage("My poppy is growing well *ba dum tiss*");
+				message.channel.sendMessage("My poppy is growing well *ba dum tiss*");
 				break;
 
 			case 34:
-			message.channel.sendMessage("Me when I'm woken up");
+				message.channel.sendMessage("Me when I'm woken up");
 				break;
 
 			case 35:
-			message.channel.sendMessage("Oooh I remember that box, she was obsessive with that but we had to send it back to amazon");
+				message.channel.sendMessage("Oooh I remember that box, she was obsessive with that but we had to send it back to amazon");
 				break;
 
 			case 36:
@@ -479,7 +472,7 @@ client.on('message', message => {
 				message.channel.sendMessage("tongue");
 				break;
 
-			case 42
+			case 42:
 				message.channel.sendMessage("NSFW");
 				break;
 
