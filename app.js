@@ -531,10 +531,10 @@ client.on('message', message => {
 	}
 	
 	if (message.content.match(/kitchen nightmares/i) || message.content.match(/lamb sauce/i) || message.content.match(/gordon/i) || message.content.match(/ramsay/i))
-    {
-		message.channel.sendMessage("Funny you say that https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg");
+   	 {
+		message.channel.send("Funny you say that", {files: ["https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg"]});
 		return;
-    }
+ 	   }
 	
 	if (message.content.match(/send help/i))
 	{
