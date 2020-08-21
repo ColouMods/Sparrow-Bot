@@ -23,6 +23,31 @@ client.on("guildCreate", guild => {
 
 //GENERAL STUFF
 client.on('message', message => {
+	
+	// if Loren Bot says brotato, give RNG 10 chances to make her randomly repeat part of his message
+	if (message.author.id == 424318662674087946 && message.content.match(/brotato/i)) { 
+	//if (message.content.match(/brotato/i)) { 
+		broCount = 10;
+		message.channel.send("Lmao");
+	}
+	
+	if (broCount >= 1) {
+		broMode = 1;
+		broCount--;
+	} else {
+		broMode = 0;
+	}
+	
+	if (broMode == 1) {
+		brotato = (Math.floor(Math.random() * 10)+1);
+		if (brotato == 1) {
+			message.channel.sendMessage("yo whaddup my brotato");
+			// if RNG complies, we deactivate broMode and reset broCount
+			broCount = 0;
+			broMode = 0;
+		}	
+	}
+
 	if(message.author.bot) return;
 	
 	lmaoNum = (Math.floor(Math.random() * 10)+1);
@@ -131,31 +156,6 @@ client.on('message', message => {
 		message.channel.sendMessage("Nah mate");
 		message.channel.sendMessage("You're cancer");
 	}
-	
-	// if Loren Bot says brotato, give RNG 10 chances to make her randomly repeat part of his message
-	//if (message.author.id == 424318662674087946 && message.content.match(/brotato/i)) { 
-	if (message.content.match(/brotato/i)) { 
-		broCount = 10;
-		message.channel.send("Lmao");
-	}
-	
-	if (broCount >= 1) {
-		broMode = 1;
-		broCount--;
-	} else {
-		broMode = 0;
-	}
-	
-	if (broMode == 1) {
-		brotato = (Math.floor(Math.random() * 10)+1);
-		if (brotato == 1) {
-			message.channel.sendMessage("yo whaddup my brotato");
-			// if RNG complies, we deactivate broMode and reset broCount
-			broCount = 0;
-			broMode = 0;
-		}	
-	}
-	
 	return;
 });
 
