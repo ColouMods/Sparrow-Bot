@@ -133,7 +133,8 @@ client.on('message', message => {
 	}
 	
 	// if Loren Bot says brotato, give RNG 10 chances to make her randomly repeat part of his message
-	if (message.author.id == 424318662674087946 && message.content.match(/brotato/i)) { 
+	//if (message.author.id == 424318662674087946 && message.content.match(/brotato/i)) { 
+	if (message.content.match(/brotato/i)) { 
 		broCount = 10;
 		message.channel.send("Lmao");
 	}
