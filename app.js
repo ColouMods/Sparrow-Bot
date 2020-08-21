@@ -531,10 +531,10 @@ client.on('message', message => {
 	}
 	
 	if (message.content.match(/kitchen nightmares/i) || message.content.match(/lamb sauce/i) || message.content.match(/gordon/i) || message.content.match(/ramsay/i))
-   	 {
+   	{
 		message.channel.send("Funny you say that", {files: ["https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg"]});
 		return;
- 	   }
+ 	}
 	
 	if (message.content.match(/send help/i))
 	{
@@ -545,16 +545,15 @@ client.on('message', message => {
 	
 	if (message.content.match(/window frames/i))
 	{
-        message.channel.sendMessage("WHAT TF");
-		message.channel.sendMessage("https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/WHATTF.png");
+		message.channel.send("WHAT TF", {files: ["https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/WHATTF.png"]});
 		return;
-    }
+	}
 	
 	if (message.content.match(/lol/i) || message.content.match(/lmfao/i) || message.content.match(/lmao/i) || message.content.match(/rofl/i))
-    {
-        message.channel.sendMessage("Lmao");
+	{
+		message.channel.sendMessage("Lmao");
 		return;
-    }
+	}
 
 	if (message.content.match(/mute sparrow bot/i))
 	{
