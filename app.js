@@ -15,38 +15,123 @@ client.on('ready', () => {
 	setTimeout(() => { 
 		client.user.setStatus('online');
 	}, 1000);
-	//client.user.setActivity('Sims 2 Ultimate Collection', { type: 'PLAYING' });
-	/*client.user.setActivity('YouTube', { type: 'WATCHING' })
-	.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-	.catch(console.error);*/
-	/*client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
-	.then(console.log)
-	.catch(console.error);*/
 });
-
-//client.on('message', message => {
-//	if (message.author.id == 90852908509175808)
-//	{
-//      	message.author.sendMessage("Hi Chris lmao");
-//	}
-//});
-
-	/*
-	I don't know why this was in the DM Cloou section but I'm scared to fully delete it.
-	async run(message) {
-	let client = message.channel.client;
-	let user = client.fetchUser('<333710766706524167>')
-	.then(user => {
-        user.sendMessage('Test message'); 
-
-    	});
-	}*/
 
 client.on("guildCreate", guild => {
     guild.channels.find("name", "shar-general").sendMessage("I don't know if this is the place to introduce youself, but hi!");
 });
 
+//GENERAL STUFF
 client.on('message', message => {
+	if(message.author.bot) return;
+	
+	lmaoNum = (Math.floor(Math.random() * 10)+1);
+	if (lmaoNum == 1)
+    	{
+        message.channel.sendMessage("Lmao");
+    	}
+	
+	cuntNum = (Math.floor(Math.random() * 100)+1);
+	if (cuntNum == 1)
+    	{
+        message.channel.sendMessage("i hope you're prepared for an unforgettable cunt");
+    	}
+	
+	fuckNum = (Math.floor(Math.random() * 200)+1);
+	if (fuckNum == 1)
+    	{
+        message.channel.sendMessage("I used to be a renegade :skull: , I used to :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: <:catThink:434451031145840641>  :sweat_drops:  around :arrow_heading_up: :repeat: \nBut I couldn't take the punishment :alarm_clock:  :house_abandoned:, and had to settle down :house: :arrow_down: \nNow I'm playing it real straight :arrow_right:  , and :regional_indicator_y: :regional_indicator_e: :regional_indicator_s: I  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: my BEES :bee: \nYou might :thinking: I'm crazy, but I don't even care :no_entry_sign: \nBecause I can tell what's going on :ok: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee:");
+	}
+	
+	if (message.content.match(/dream/i)) {
+        message.channel.sendMessage("I had one last night. I failed my A-Levels with DEP. No idea what the P grade was but it must have been bad because I cried pretty bad over it. UCAS track had Coventry marked as \"lol rejected\" and I had to start retakes that day. It was the most disappointing thing because I didn't have Adrian, I had Kelly. Those of you who talked to me last year will know who she is. (Those who don't, media teacher from first year). She was her usual annoying, scary self and I ended up crying when she walked into the room. The dream ended with her finding my old revision as she was throwing it out and saw it said \"Damn Kelly was such a bitch lmao\"");
+	}
+	
+	pizzaNum = (Math.floor(Math.random() * 100)+1);
+	if (pizzaNum == 1) 
+    	{
+        message.channel.sendMessage("My sister (taco smasher) got into a habit of making pizza except her dough was shit but my parents kept praising it like it was god-tier and I must admit, I didn't like going back to my parents because she'd force this shit pizza at me and omg she didn't even use yeast or anything");
+	}
+	
+	//for servers only, DMs will not have the wrong channel feature
+	if (message.content.match(/cat/i) && message.channel.type != "dm") {
+    	wrongNum = (Math.floor(Math.random() * 50)+1);
+		rightChannel = message.guild.id;
+		if (wrongNum != 1)
+		{
+			catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+			message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
+			return;
+		}
+		else if (wrongNum == 1)
+		{
+			wrongChannel = (Math.floor(Math.random() * sendChannels.length));
+			catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+			msgChannel = sendChannels[wrongChannel];
+			client.channels.get(msgChannel).sendMessage(catPath + "cat" + catNum + ".jpg");
+				if (client.channels.get(msgChannel).guild.id != rightChannel) {	
+				setTimeout(() => { 
+					client.channels.get(msgChannel).send("Whoops, wrong server.");
+				}, 3390);
+			}
+			return;
+		}
+	}
+	// this cat code is DM specific, as the wrong channel feature would cause a crash
+	if (message.content.match(/cat/i) && message.channel.type == "dm")
+	{
+		catNum = (Math.floor(Math.random() * 56)+1); // this is the number of possibilities starting from zero, so 5 is 01234
+		message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
+		return;
+	}
+	
+	if (message.content.match(/kitchen nightmares/i) || message.content.match(/lamb sauce/i) || message.content.match(/gordon/i) || message.content.match(/ramsay/i))
+   	{
+		message.channel.send("Funny you say that", {files: ["https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg"]});
+		return;
+ 	}
+	
+	if (message.content.match(/send help/i))
+	{
+    	message.channel.send("Help.");
+		//Haha get it she sends "Help."
+		//I don't even know if that was the joke Sprow was making, she's so confusing. ;-;
+	}
+	
+	if (message.content.match(/window frames/i))
+	{
+		message.channel.send("WHAT TF", {files: ["https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/WHATTF.png"]});
+		return;
+	}
+	
+	if (message.content.match(/lol/i) || message.content.match(/lmfao/i) || message.content.match(/lmao/i) || message.content.match(/rofl/i))
+	{
+		message.channel.sendMessage("Lmao");
+		return;
+	}
+
+	if (message.content.match(/mute sparrow bot/i))
+	{
+		threeEyedSprow = (Math.floor(Math.random() * 50) + 1);
+		if (threeEyedSprow == 1) {
+			message.channel.sendMessage(";-;;");
+		} else {
+			message.channel.sendMessage(";-;");
+		}
+		return;
+	}
+	
+	if ((message.content.match(/1 in 4000/i)) || ((message.content.match(/tmsm/i) && message.content.match(/crash/i))) )
+	{
+		message.channel.sendMessage("OH GOD\nit was my own fault Liquid's game kept crashing.\nI didn't convert it right.\nIt crashes the game.\nI blamed Radical for something that is my fault\nI fucked up Liquid's stream");
+	}
+	
+	if (message.content.match(/bot/i) && message.content.match(/cancer/i))
+	{
+		message.channel.sendMessage("Nah mate");
+		message.channel.sendMessage("You're cancer");
+	}
+	
 	// if Loren Bot says brotato, give RNG 10 chances to make her randomly repeat part of his message
 	if (message.author.id == 424318662674087946 && message.content.match(/brotato/i)) { 
 		broCount = 10;
@@ -69,16 +154,11 @@ client.on('message', message => {
 			broMode = 0;
 		}	
 	}
+	
+	return;
 });
 
-client.on('message', message => {
-	if (message.content.match(/bot/i) && message.content.match(/cancer/i))
-	{
-		message.channel.sendMessage("Nah mate");
-		message.channel.sendMessage("You're cancer");
-	}
-});
-
+//GENERAL MENTION STUFF
 client.on('message', message=> {
 	if (message.isMentioned(client.user)) {
 		if (message.content.match(/view github/i))
@@ -139,6 +219,8 @@ client.on('message', message=> {
 		}
 	}
 });
+
+//"SPARROW BOT SAYS" STUFF (dear god this is a mess)
 
 //memes and shit
 client.on('message', message => {
@@ -301,25 +383,6 @@ client.on('message', message => {
 	}
 });
 
-
-client.on('message', message => {
-	if (message.author.bot == true) {
-		if (message.content === "<@424679471077916682> Hi") {
-			message.channel.startTyping();
-			setTimeout(() => {
-				message.channel.sendMessage("Hi.");	
-			}, 1310);
-			message.channel.stopTyping(true);
-		} else if (message.content === "How are you?") {
-			message.channel.startTyping();
-			setTimeout(() => {
-       				message.channel.send("OK, I guess.");
-			}, 3930);
-			message.channel.stopTyping(true);
-       		}
-}
-return;
-});
 //This is for responding to Chris
 client.on('message', message => {
 	if (message.author.id == 90852908509175808) {
@@ -334,114 +397,6 @@ client.on('message', message => {
 		}
 	}
 return;
-});
-
-//THIS IS MORE GENERAL STUFF.
-client.on('message', message => {
-	if(message.author.bot) return;
-	
-	lmaoNum = (Math.floor(Math.random() * 10)+1);
-	if (lmaoNum == 1)
-    	{
-        message.channel.sendMessage("Lmao");
-    	}
-	
-	cuntNum = (Math.floor(Math.random() * 100)+1);
-	if (cuntNum == 1)
-    	{
-        message.channel.sendMessage("i hope you're prepared for an unforgettable cunt");
-    	}
-	
-	fuckNum = (Math.floor(Math.random() * 200)+1);
-	if (fuckNum == 1)
-    	{
-        message.channel.sendMessage("I used to be a renegade :skull: , I used to :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: <:catThink:434451031145840641>  :sweat_drops:  around :arrow_heading_up: :repeat: \nBut I couldn't take the punishment :alarm_clock:  :house_abandoned:, and had to settle down :house: :arrow_down: \nNow I'm playing it real straight :arrow_right:  , and :regional_indicator_y: :regional_indicator_e: :regional_indicator_s: I  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: my BEES :bee: \nYou might :thinking: I'm crazy, but I don't even care :no_entry_sign: \nBecause I can tell what's going on :ok: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee:");
-	}
-	
-	if (message.content.match(/dream/i)) {
-        message.channel.sendMessage("I had one last night. I failed my A-Levels with DEP. No idea what the P grade was but it must have been bad because I cried pretty bad over it. UCAS track had Coventry marked as \"lol rejected\" and I had to start retakes that day. It was the most disappointing thing because I didn't have Adrian, I had Kelly. Those of you who talked to me last year will know who she is. (Those who don't, media teacher from first year). She was her usual annoying, scary self and I ended up crying when she walked into the room. The dream ended with her finding my old revision as she was throwing it out and saw it said \"Damn Kelly was such a bitch lmao\"");
-	}
-	
-	pizzaNum = (Math.floor(Math.random() * 100)+1);
-	if (pizzaNum == 1) 
-    	{
-        message.channel.sendMessage("My sister (taco smasher) got into a habit of making pizza except her dough was shit but my parents kept praising it like it was god-tier and I must admit, I didn't like going back to my parents because she'd force this shit pizza at me and omg she didn't even use yeast or anything");
-	}
-	
-	//for servers only, DMs will not have the wrong channel feature
-	if (message.content.match(/cat/i) && message.channel.type != "dm") {
-    	wrongNum = (Math.floor(Math.random() * 50)+1);
-		rightChannel = message.guild.id;
-		if (wrongNum != 1)
-		{
-			catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-			message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
-			return;
-		}
-		else if (wrongNum == 1)
-		{
-			wrongChannel = (Math.floor(Math.random() * sendChannels.length));
-			catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-			msgChannel = sendChannels[wrongChannel];
-			client.channels.get(msgChannel).sendMessage(catPath + "cat" + catNum + ".jpg");
-				if (client.channels.get(msgChannel).guild.id != rightChannel) {	
-				setTimeout(() => { 
-					client.channels.get(msgChannel).send("Whoops, wrong server.");
-				}, 3390);
-			}
-			return;
-		}
-	}
-	// this cat code is DM specific, as the wrong channel feature would cause a crash
-	if (message.content.match(/cat/i) && message.channel.type == "dm")
-	{
-		catNum = (Math.floor(Math.random() * 56)+1); // this is the number of possibilities starting from zero, so 5 is 01234
-		message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
-		return;
-	}
-	
-	if (message.content.match(/kitchen nightmares/i) || message.content.match(/lamb sauce/i) || message.content.match(/gordon/i) || message.content.match(/ramsay/i))
-   	{
-		message.channel.send("Funny you say that", {files: ["https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg"]});
-		return;
- 	}
-	
-	if (message.content.match(/send help/i))
-	{
-    	message.channel.send("Help.");
-		//Haha get it she sends "Help."
-		//I don't even know if that was the joke Sprow was making, she's so confusing. ;-;
-	}
-	
-	if (message.content.match(/window frames/i))
-	{
-		message.channel.send("WHAT TF", {files: ["https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/WHATTF.png"]});
-		return;
-	}
-	
-	if (message.content.match(/lol/i) || message.content.match(/lmfao/i) || message.content.match(/lmao/i) || message.content.match(/rofl/i))
-	{
-		message.channel.sendMessage("Lmao");
-		return;
-	}
-
-	if (message.content.match(/mute sparrow bot/i))
-	{
-		threeEyedSprow = (Math.floor(Math.random() * 50) + 1);
-		if (threeEyedSprow == 1) {
-			message.channel.sendMessage(";-;;");
-		} else {
-			message.channel.sendMessage(";-;");
-		}
-		return;
-	}
-	
-	if ((message.content.match(/1 in 4000/i)) || ((message.content.match(/tmsm/i) && message.content.match(/crash/i))) )
-	{
-		message.channel.sendMessage("OH GOD\nit was my own fault Liquid's game kept crashing.\nI didn't convert it right.\nIt crashes the game.\nI blamed Radical for something that is my fault\nI fucked up Liquid's stream");
-	}
-	
-	return;
 });
 
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
