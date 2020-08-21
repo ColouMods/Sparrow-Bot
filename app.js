@@ -83,19 +83,7 @@ client.on('message', message => {
 
 client.on('message', message=> {
 	if (message.isMentioned(client.user)) {
-		if (message.content.match(/DM Colou/i)) {
-			message.channel.sendMessage('Okay then.');
-			client.users.get("333710766706524167").sendMessage("Hi Colou")
-		}
-		
-		else if (message.content.match(/Annoy Chris/i) && message.author.id == 333710766706524167) {
-			message.channel.sendMessage('Absolutely.');
-			client.users.get("90852908509175808").sendMessage("Hey, Colou asked me to annoy you.");
-			client.users.get("90852908509175808").sendMessage("I think he enjoys annoying you.");
-			client.users.get("90852908509175808").sendMessage("He's weird.");
-		}
-
-		else if (message.content.match(/view github/i))
+		if (message.content.match(/view github/i))
 		{
 			message.channel.sendMessage("My GitHub link is https://github.com/ColouMods/Sparrow-Bot/ Wait, I don't have a Github link, I'm half-digested Sparrow.");
 		}
@@ -145,16 +133,6 @@ client.on('message', message=> {
 		else if (message.content.match(/springfield nightmares/i))
 		{
 			message.channel.sendMessage("Oh god I gotta work on that");	
-		}
-		
-		if (message.content.match(/Chris is broken/i))
-		{
-			client.channels.get('424212795970551808').sendMessage('Uh oh, I broke him.')
-		}
-		
-		if (message.content.match(/Cloou is broken/i))
-		{
-			client.channels.get('424212795970551808').sendMessage('Whoops, posted twice.')
 		}
 		
 		else
