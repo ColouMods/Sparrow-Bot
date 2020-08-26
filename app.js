@@ -7,6 +7,7 @@ var catPath = "https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/im
 greet = ["Oh hi", "Hi", "Sup"];
 sendChannels = ["447499927220781068", "449616538358513698"];
 //this is just to check if she'll come back online
+//as is this
 client.on('ready', () => {
 	console.log('I am ready!');
 	client.user.setPresence({game: {name: "The Sims 2: Ultimate Collection", type: 0}});
