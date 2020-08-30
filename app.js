@@ -24,21 +24,21 @@ client.on("guildCreate", guild => {
 
 //GENERAL STUFF
 client.on('message', message => {
-	
+
 	// if Loren Bot says brotato, give RNG 10 chances to make her randomly repeat part of his message
 	if (message.author.id == 424318662674087946 && message.content.match(/brotato/i)) { 
 	//if (message.content.match(/brotato/i)) { 
 		broCount = 10;
 		message.channel.send("Lmao");
 	}
-	
+
 	if (broCount >= 1) {
 		broMode = 1;
 		broCount--;
 	} else {
 		broMode = 0;
 	}
-	
+
 	if (broMode == 1) {
 		brotato = (Math.floor(Math.random() * 10)+1);
 		if (brotato == 1) {
@@ -46,26 +46,23 @@ client.on('message', message => {
 			// if RNG complies, we deactivate broMode and reset broCount
 			broCount = 0;
 			broMode = 0;
-		}	
+		}
 	}
 
 	if(message.author.bot) return;
-	
+
 	lmaoNum = (Math.floor(Math.random() * 10)+1);
-	if (lmaoNum == 1)
-    	{
+	if (lmaoNum == 1) {
         message.channel.sendMessage("Lmao");
-    	}
-	
+	}
+
 	cuntNum = (Math.floor(Math.random() * 100)+1);
-	if (cuntNum == 1)
-    	{
-        message.channel.sendMessage("i hope you're prepared for an unforgettable cunt");
-    	}
+	if (cuntNum == 1) {
+	    message.channel.sendMessage("i hope you're prepared for an unforgettable cunt");
+	}
 	
 	fuckNum = (Math.floor(Math.random() * 200)+1);
-	if (fuckNum == 1)
-    	{
+	if (fuckNum == 1) {
         message.channel.sendMessage("I used to be a renegade :skull: , I used to :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: <:catThink:434451031145840641>  :sweat_drops:  around :arrow_heading_up: :repeat: \nBut I couldn't take the punishment :alarm_clock:  :house_abandoned:, and had to settle down :house: :arrow_down: \nNow I'm playing it real straight :arrow_right:  , and :regional_indicator_y: :regional_indicator_e: :regional_indicator_s: I  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: my BEES :bee: \nYou might :thinking: I'm crazy, but I don't even care :no_entry_sign: \nBecause I can tell what's going on :ok: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee: \nIt's hip to  :regional_indicator_f: :regional_indicator_u: :regional_indicator_c: :regional_indicator_k: BEES :bee:");
 	}
 	
@@ -74,52 +71,51 @@ client.on('message', message => {
 	}
 	
 	pizzaNum = (Math.floor(Math.random() * 100)+1);
-	if (pizzaNum == 1) 
-    	{
+	if (pizzaNum == 1) {
         message.channel.sendMessage("My sister (taco smasher) got into a habit of making pizza except her dough was shit but my parents kept praising it like it was god-tier and I must admit, I didn't like going back to my parents because she'd force this shit pizza at me and omg she didn't even use yeast or anything");
 	}
 	
-	//for servers only, DMs will not have the wrong channel feature
-	if (message.content.match(/cat/i) && message.channel.type != "dm") {
-    	wrongNum = (Math.floor(Math.random() * 50)+1);
-		rightChannel = message.guild.id;
-		if (wrongNum != 1)
-		{
-			catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+	if (message.content.match(/cat/i)) {
+		// server specific
+		if (message.channel.type != "dm") {
+			wrongNum = (Math.floor(Math.random() * 50)+1);
+			rightChannel = message.guild.id;
+			if (wrongNum != 1) {
+				catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+				message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
+				return;
+				}
+			else if (wrongNum == 1){
+				wrongChannel = (Math.floor(Math.random() * sendChannels.length));
+				catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
+				msgChannel = sendChannels[wrongChannel];
+				client.channels.get(msgChannel).sendMessage(catPath + "cat" + catNum + ".jpg");
+					if (client.channels.get(msgChannel).guild.id != rightChannel) {	
+					setTimeout(() => { 
+						client.channels.get(msgChannel).send("Whoops, wrong server.");
+					}, 3390);
+				}
+				return;
+			}
+		}
+	
+		// DM specific, wrong channel would cause a crash in this case
+		if (message.channel.type == "dm") {
+			catNum = (Math.floor(Math.random() * 56)+1); // this is the number of possibilities starting from zero, so 5 is 01234
 			message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
 			return;
 		}
-		else if (wrongNum == 1)
-		{
-			wrongChannel = (Math.floor(Math.random() * sendChannels.length));
-			catNum = (Math.floor(Math.random() * 56)+1);//this is the number of possibilities starting from zero, so 5 is 01234
-			msgChannel = sendChannels[wrongChannel];
-			client.channels.get(msgChannel).sendMessage(catPath + "cat" + catNum + ".jpg");
-				if (client.channels.get(msgChannel).guild.id != rightChannel) {	
-				setTimeout(() => { 
-					client.channels.get(msgChannel).send("Whoops, wrong server.");
-				}, 3390);
-			}
-			return;
-		}
-	}
-	// this cat code is DM specific, as the wrong channel feature would cause a crash
-	if (message.content.match(/cat/i) && message.channel.type == "dm")
-	{
-		catNum = (Math.floor(Math.random() * 56)+1); // this is the number of possibilities starting from zero, so 5 is 01234
-		message.channel.sendMessage(catPath + "cat" + catNum + ".jpg");
-		return;
 	}
 	
 	if (message.content.match(/kitchen nightmares/i) || message.content.match(/lamb sauce/i) || message.content.match(/gordon/i) || message.content.match(/ramsay/i))
-   	{
+	{
 		message.channel.send("Funny you say that", {files: ["https://raw.githubusercontent.com/ColouMods/Sparrow-Bot/master/images/ramsay.jpg"]});
 		return;
- 	}
+	}
 	
 	if (message.content.match(/send help/i))
 	{
-    	message.channel.send("Help.");
+		message.channel.send("Help.");
 		//Haha get it she sends "Help."
 		//I don't even know if that was the joke Sprow was making, she's so confusing. ;-;
 	}
@@ -146,12 +142,12 @@ client.on('message', message => {
 		}
 		return;
 	}
-	
+
 	if ((message.content.match(/1 in 4000/i)) || ((message.content.match(/tmsm/i) && message.content.match(/crash/i))) )
 	{
 		message.channel.sendMessage("OH GOD\nit was my own fault Liquid's game kept crashing.\nI didn't convert it right.\nIt crashes the game.\nI blamed Radical for something that is my fault\nI fucked up Liquid's stream");
 	}
-	
+
 	if (message.content.match(/bot/i) && message.content.match(/cancer/i))
 	{
 		message.channel.sendMessage("Nah mate");
@@ -177,7 +173,7 @@ client.on('message', message=> {
 		)
 		{
 			message.channel.sendMessage("boolprop cloou false");
-    		}
+			}
 		
 		else if (message.content.match(/war is good for absolutely nothing/i))
 		{
@@ -185,7 +181,7 @@ client.on('message', message=> {
 			message.channel.sendMessage("Right, I'm afraid I'm odd");
 			message.channel.sendMessage("No");
 			message.channel.sendMessage("Off to bed*");
-        	}
+			}
 		
 		else if (message.content.match(/hi/i) || message.content.match(/hello/i) || message.content.match(/hey/i))
 		{
@@ -224,164 +220,111 @@ client.on('message', message=> {
 
 //"SPARROW BOT SAYS" STUFF (dear god this is a mess)
 
-//memes and shit
 client.on('message', message => {
+
+//memes and shit
 	if ((message.channel.id == 449617271258742784) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    	client.channels.get('424212795970551808').sendMessage(shitToSend);
+		client.channels.get('424212795970551808').sendMessage(shitToSend);
 	}
-});
+	
+//hwwotw general
+	if ((message.channel.id == 452839469779779596) && (message.author.bot == false)) {
+		var shitToSend = message.content;
+		client.channels.get('422215368782643202').sendMessage(shitToSend);
+	}
+/* dead channels RIP
 //secret 
-client.on('message', message => {
 	if ((message.channel.id == 452827828103151616) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    	client.channels.get('447499927220781068').sendMessage(shitToSend);
+		client.channels.get('447499927220781068').sendMessage(shitToSend);
 	}
-});
-//hwwotw general
-client.on('message', message => {
-	if ((message.channel.id == 452839469779779596) && (message.author.bot == false))
-	{
-		var shitToSend = message.content;
-    	client.channels.get('422215368782643202').sendMessage(shitToSend);
-	}
-});
-
+	
 //sprows mod server general
-client.on('message', message => {
-	if ((message.channel.id == 455383264547569676) && (message.author.bot == false))
-	{
+	if ((message.channel.id == 455383264547569676) && (message.author.bot == false)) {
 		var shitToSend = message.content;
-    	client.channels.get('454685400699502594').sendMessage(shitToSend);
+		client.channels.get('454685400699502594').sendMessage(shitToSend);
 	}
-});
+*/
 
 //CHRIS BEGIN
-
-client.on('message', message => {
 	if ((message.channel.id == 449683861664956426) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    	client.users.get("90852908509175808").sendMessage(shitToSend);
+		client.users.get("90852908509175808").sendMessage(shitToSend);
 	}
-});
 
-client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 90852908509175808))
 	{
 		var shitToSend = message.content;
-    	client.channels.get('449683861664956426').sendMessage("Chris just said ```" + shitToSend + "```");
+		client.channels.get('449683861664956426').sendMessage("Chris just said ```" + shitToSend + "```");
 	}
-});
-//CHRIS END
 
 //NIGHT BEGIN
-
-client.on('message', message => {
 	if ((message.channel.id == 449699947080712211) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    	client.users.get("230847867458158593").sendMessage(shitToSend);
+		client.users.get("230847867458158593").sendMessage(shitToSend);
 	}
-});
 
-client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 230847867458158593))
 	{
 		var shitToSend = message.content;
-    	client.channels.get('449699947080712211').sendMessage("Nightbane just said ```" + shitToSend + "```");
+		client.channels.get('449699947080712211').sendMessage("Nightbane just said ```" + shitToSend + "```");
 	}
-});
-//NIGHT END
 
 //WILL BEGIN
-
-client.on('message', message => {
 	if ((message.channel.id == 449705781298987008) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    	client.users.get("188248640635011072").sendMessage(shitToSend);
+		client.users.get("188248640635011072").sendMessage(shitToSend);
 	}
-});
 
-client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 188248640635011072))
 	{
 		var shitToSend = message.content;
-    	client.channels.get('449705781298987008').sendMessage("Will just said ```" + shitToSend + "```");
+		client.channels.get('449705781298987008').sendMessage("Will just said ```" + shitToSend + "```");
 	}
-});
-//WILL END
 
 //SPROW BEGIN
-
-client.on('message', message => {
 	if ((message.channel.id == 450033076114948107) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    	client.users.get("259458435484090369").sendMessage(shitToSend);
+		client.users.get("259458435484090369").sendMessage(shitToSend);
 	}
-});
 
-client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 259458435484090369))
 	{
 		var shitToSend = message.content;
-    	client.channels.get('450033076114948107').sendMessage("Sparrow just said ```" + shitToSend + "```");
+		client.channels.get('450033076114948107').sendMessage("Sparrow just said ```" + shitToSend + "```");
 	}
-});
-//SPROW END
 
 //CLOOU BEGIN
-
-client.on('message', message => {
 	if ((message.channel.id == 450035060863926272) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    	client.users.get("333710766706524167").sendMessage(shitToSend);
+		client.users.get("333710766706524167").sendMessage(shitToSend);
 	}
-});
 
-client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 333710766706524167))
 	{
 		var shitToSend = message.content;
-    	client.channels.get('450035060863926272').sendMessage("Colou just said ```" + shitToSend + "```");
+		client.channels.get('450035060863926272').sendMessage("Colou just said ```" + shitToSend + "```");
 	}
-});
-//CLOOU END
 
 //HOMER BEGIN
-
-client.on('message', message => {
 	if ((message.channel.id == 450037451994693651) && (message.author.bot == false))
 	{
 		var shitToSend = message.content;
-    	client.users.get("290486859480563713").sendMessage(shitToSend);
+		client.users.get("290486859480563713").sendMessage(shitToSend);
 	}
-});
 
-client.on('message', message => {
 	if ((message.channel.type =="dm") && (message.author.id == 290486859480563713))
 	{
 		var shitToSend = message.content;
-    	client.channels.get('450037451994693651').sendMessage("Homer just said ```" + shitToSend + "```");
-	}
-});
-//HOMER END
-
-client.on('message', message => {
-    if (message.content.match(/execute order 66/i))
-	{
-        message.channel.sendMessage('Understood.');
-		client.users.get("259458435484090369").sendMessage("Hi me, I'm you. Wanna be friends?");
-	}
-	if (message.content.match(/execute order 67/i))
-	{
-        message.channel.sendMessage('You just ruined the reference, but okay.');
-		client.users.get("259458435484090369").sendMessage("So, how was your day?");
+		client.channels.get('450037451994693651').sendMessage("Homer just said ```" + shitToSend + "```");
 	}
 });
 
@@ -390,10 +333,10 @@ client.on('message', message => {
 	if (message.author.id == 90852908509175808) {
 		if ((message.content.match(/<@424679471077916682>/i) && message.content.match(/die/i)) || (message.content.match(/bot/i) && message.content.match(/die/i))) {
 			if (diebot == 20) {
-       			message.channel.sendMessage("Don't you think you've said that enough, Chris?");
+				message.channel.sendMessage("Don't you think you've said that enough, Chris?");
 				diebot = 1;
 				return;
-    		}
+			}
 			message.channel.sendMessage("No, Chris. Lmao.");
 			diebot++;
 		}
@@ -406,7 +349,7 @@ client.on('message', message => {
 	if (message.author.id == 424679471077916682 && message.content.match(/https:\/\/raw.githubusercontent.com\/ColouMods\/Sparrow-Bot\/master\/images\/cat/i)) {
 		catID = message.content;
 		catID = catID.slice(catPath.length + 3);
-    		catID = catID.slice(0, -4);
+			catID = catID.slice(0, -4);
 		switch(parseInt(catID, 10)) {
 			case 1:
 				message.channel.sendMessage("MIIIA");
@@ -529,7 +472,7 @@ client.on('message', message => {
 			default:
 				break;
 		}
-	}	
+	}
 });
 
 // THIS  MUST  BE  THIS  WAY
