@@ -256,13 +256,13 @@ client.on('message', message => {
 		client.users.get("90852908509175808").sendMessage(shitToSend);
 	}
 
-	if (message.author.id == 90852908509175808) {
+	if (message.author.id == 90852908509175808 || message.author.id == 290486859480563713) {
 		if (message.channel.type =="dm") {
 			var shitToSend = message.content;
 			client.channels.get('449683861664956426').sendMessage("Chris just said ```" + shitToSend + "```");
 			return;
 		} else {
-			if ((message.content.match(/<@424679471077916682>/i) && message.content.match(/die/i)) || (message.content.match(/bot/i) && message.content.match(/die/i))) {
+			if (((message.isMentioned(client.user)) && message.content.match(/die/i)) || (message.content.match(/bot/i) && message.content.match(/die/i))) {
 				if (diebot == 20) {
 					message.channel.sendMessage("Don't you think you've said that enough, Chris?");
 					diebot = 1;
