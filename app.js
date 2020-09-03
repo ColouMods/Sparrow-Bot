@@ -256,10 +256,22 @@ client.on('message', message => {
 		client.users.get("90852908509175808").sendMessage(shitToSend);
 	}
 
-	if ((message.channel.type =="dm") && (message.author.id == 90852908509175808))
-	{
-		var shitToSend = message.content;
-		client.channels.get('449683861664956426').sendMessage("Chris just said ```" + shitToSend + "```");
+	if (message.author.id == 90852908509175808) {
+		if (message.channel.type =="dm") {
+			var shitToSend = message.content;
+			client.channels.get('449683861664956426').sendMessage("Chris just said ```" + shitToSend + "```");
+			return;
+		} else {
+			if ((message.content.match(/<@424679471077916682>/i) && message.content.match(/die/i)) || (message.content.match(/bot/i) && message.content.match(/die/i))) {
+				if (diebot == 20) {
+					message.channel.sendMessage("Don't you think you've said that enough, Chris?");
+					diebot = 1;
+					return;
+				}
+				message.channel.sendMessage("No, Chris. Lmao.");
+				diebot++;
+			}
+		}
 	}
 
 //NIGHT BEGIN
@@ -326,22 +338,6 @@ client.on('message', message => {
 		var shitToSend = message.content;
 		client.channels.get('450037451994693651').sendMessage("Homer just said ```" + shitToSend + "```");
 	}
-});
-
-//This is for responding to Chris
-client.on('message', message => {
-	if (message.author.id == 90852908509175808) {
-		if ((message.content.match(/<@424679471077916682>/i) && message.content.match(/die/i)) || (message.content.match(/bot/i) && message.content.match(/die/i))) {
-			if (diebot == 20) {
-				message.channel.sendMessage("Don't you think you've said that enough, Chris?");
-				diebot = 1;
-				return;
-			}
-			message.channel.sendMessage("No, Chris. Lmao.");
-			diebot++;
-		}
-	}
-return;
 });
 
 //THIS IS SPECIFICALLY REPLYING TO CAT IMAGE LINKS.
