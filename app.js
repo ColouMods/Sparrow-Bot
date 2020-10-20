@@ -135,7 +135,7 @@ client.on('message', message => {
 	if (((message.content.match(/shut up/i)) || (message.content.match(/shut the fuck up/i)) || (message.content.match(/ban/i)) || (message.content.match(/delete/i)) || (message.content.match(/mute/i))) && (message.content.match(/bot/i)))
 	{
 		fightOrFlight = (Math.floor(Math.random() * 3) + 1);
-		if fightOrFlight = 1 {
+		if (fightOrFlight == 1) {
 			message.channel.sendMessage("fight me outside tesco");			
 		} else {
 			threeEyedSprow = (Math.floor(Math.random() * 50) + 1);
