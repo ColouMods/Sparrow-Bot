@@ -1,3 +1,4 @@
+//heroku eat my shorts
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var diebot = 1;
