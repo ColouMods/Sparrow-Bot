@@ -138,7 +138,6 @@ client.on('message', message => {
 		fightOrFlight = (Math.floor(Math.random() * 3) + 1);
 		if (fightOrFlight == 1) {
 			message.channel.sendMessage("fight me outside tesco");
-			break;
 		} else {
 			threeEyedSprow = (Math.floor(Math.random() * 50) + 1);
 			if (threeEyedSprow == 1) {
@@ -146,7 +145,6 @@ client.on('message', message => {
 			} else {
 				message.channel.sendMessage(";-;");
 			}
-			break;
 			return;
 		}
 	}
